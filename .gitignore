@@ -10,6 +10,10 @@
 *.userosscache
 *.sln.docstates
 
+# Environments
+lido/src/environments
+lido/src/environments.prod.ts
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -348,3 +352,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Firebase
+lido/dist

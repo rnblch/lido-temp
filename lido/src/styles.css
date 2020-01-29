@@ -1,0 +1,143 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "destyle.css";
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  line-height: 1.4;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0ps;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  display: block;
+}
+
+.main-content {
+  display: block;
+}
+
+button {
+  -webkit-appearance: button;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.rw400 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+.rw500 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.rw600 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.rw700 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.rw800 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+}
+
+.rw900 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+
+.center-text-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.center-text {
+  align-self: center;
+  font-size: 2.625rem;
+  text-align: center;
+}
+
+.glow {
+  color: #ffd166;
+}
+
+.background-glow {
+  background-color: #ffd166;
+}
+
+.azure {
+  color: #44ccff;
+}
+
+.background-azure {
+  background-color: #44ccff;
+}
+
+.infra {
+  color: #ef476f;
+}
+
+.background-infra {
+  background-color: #ef476f;
+}
+
+.turquoise {
+  color: #15e6cd;
+}
+
+.background-turquoise {
+  background-color: #15e6cd;
+}
+
+.nah {
+  color: #e54b4b;
+}
+
+.background-nah {
+  background-color: #e54b4b;
+}
+
+.serpent {
+  color: #43bccd;
+}
+
+.background-serpent {
+  background-color: #43bccd;
+}
