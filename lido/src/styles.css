@@ -1,5 +1,5 @@
-@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
-@import "destyle.css";
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'destyle.css';
 * {
   -webkit-font-smoothing: antialiased;
 }
@@ -21,7 +21,7 @@ body {
   display: block;
 }
 
-.main-content {
+#main {
   display: block;
 }
 
@@ -50,34 +50,19 @@ textarea {
   margin: 0;
 }
 
-.rw400 {
-  font-family: "Raleway", sans-serif;
+.ub400 {
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
 }
 
-.rw500 {
-  font-family: "Raleway", sans-serif;
+.ub500 {
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 500;
 }
 
-.rw600 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-}
-
-.rw700 {
-  font-family: "Raleway", sans-serif;
+.ub700 {
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
-}
-
-.rw800 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-}
-
-.rw900 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 900;
 }
 
 .center-text-wrapper {
@@ -95,49 +80,49 @@ textarea {
 }
 
 .glow {
-  color: #ffd166;
+  color: #ffbf26;
 }
 
 .background-glow {
-  background-color: #ffd166;
+  background-color: #ffbf26;
 }
 
-.azure {
-  color: #44ccff;
+.comfort {
+  color: #f3a8a9;
 }
 
-.background-azure {
-  background-color: #44ccff;
+.background-comfort {
+  background-color: #f3a8a9;
 }
 
-.infra {
-  color: #ef476f;
+.ochre {
+  color: #ce7c16;
 }
 
-.background-infra {
-  background-color: #ef476f;
+.background-ochre {
+  background-color: #ce7c16;
 }
 
-.turquoise {
-  color: #15e6cd;
+.koa {
+  color: #2f3764;
 }
 
-.background-turquoise {
-  background-color: #15e6cd;
+.background-koa {
+  background-color: #2f3764;
 }
 
-.nah {
-  color: #e54b4b;
+.eggshell {
+  color: #e5deda;
 }
 
-.background-nah {
-  background-color: #e54b4b;
+.background-eggshell {
+  background-color: #e5deda;
 }
 
-.serpent {
-  color: #43bccd;
+.full-width {
+  width: 100%;
 }
 
-.background-serpent {
-  background-color: #43bccd;
+.autocomplete {
+  max-height: 220px !important;
 }

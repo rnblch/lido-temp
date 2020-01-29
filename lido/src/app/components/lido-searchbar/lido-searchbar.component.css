@@ -1,0 +1,58 @@
+input {
+  color: #ffbf26;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  color: white;
+}
+
+.left-align {
+  text-align: left;
+}
+
+input:focus {
+  color: white;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  color: #ffbf26 !important;
+}
+
+::ng-deep .mat-form-field-label {
+  color: white !important;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+::ng-deep .mat-form-field-underline .mat-form-field-ripple {
+  background-color: #ffbf26 !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  background-color: white !important;
+}
+
+::ng-deep .mat-option-text {
+  color: #2f3764 !important;
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 500;
+}
+
+::ng-deep .mat-form-field {
+  width: 20rem !important;
+}
+
+@media (min-width: 62em) {
+  ::ng-deep .mat-form-field {
+    width: 42rem !important;
+  }
+}
+
+@media (min-width: 48em) {
+  ::ng-deep .mat-form-field {
+    width: 42rem !important;
+  }
+}

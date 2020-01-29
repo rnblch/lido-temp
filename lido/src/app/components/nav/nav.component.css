@@ -5,15 +5,14 @@
   top: 0;
   left: 0;
   right: 0;
-  color: #3a3133;
-  background-color: rgb(254, 238, 232);
+  background-color: #2f3764;
   margin-bottom: 0;
   box-shadow: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 5rem;
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+  padding-right: 2rem;
 }
 
 .nav-list {
@@ -27,7 +26,7 @@
 }
 
 .nav-link:hover {
-  color: #ffd166 !important;
+  color: #ffbf26 !important;
 }
 
 .nav-link {

@@ -1,0 +1,31 @@
+<form class="center-text-wrapper" fxLayout="column">
+  <mat-form-field>
+    <input
+      [formControl]="lidoName"
+      type="text"
+      placeholder="Lido name"
+      aria-label="Lido name"
+      matInput
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete
+      class="autocomplete"
+      #auto="matAutocomplete"
+      (optionSelected)="getTemperature($event.option.value)"
+    >
+      <mat-option
+        *ngFor="let option of filteredOptions | async"
+        [value]="option"
+      >
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <div class="ub500" fxLayout="column" fxLayoutGap="2rem">
+    <h1 class="glow">
+      The water temperature at {{ selectedLido }} is {{ lastTemperature }} °C.
+    </h1>
+    <h2>Last updated: {{ lastUpdated }}</h2>
+    <h2>Opening hours: {{ openingHours }}</h2>
+  </div>
+</form>
