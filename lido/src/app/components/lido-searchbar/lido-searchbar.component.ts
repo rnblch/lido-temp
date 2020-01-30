@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
 import { TemperatureService } from '../../services/temperature.service';
+import { LidoList } from '../lido-list';
+import { Lido } from '../../models/Lido';
 
 @Component({
   selector: 'app-lido-searchbar',
@@ -11,27 +13,12 @@ import { TemperatureService } from '../../services/temperature.service';
 })
 export class LidoSearchbarComponent implements OnInit {
   lidoName = new FormControl();
-  lidos: string[] = [
-    'Beckenham Place',
-    'Brockwell',
-    'Charlton',
-    'Finchley',
-    'Hampstead Heath - Men',
-    'Hampstead Heath - Women',
-    'Hampstead Heath - Mixed',
-    'London Fields',
-    'Oasis',
-    'Park Road',
-    'Parliament Hill',
-    'Royal Docks',
-    'Serpentine',
-    'Tooting Bec',
-    'Uxbridge'
-  ];
+  lidos = LidoList;
 
-  filteredOptions: Observable<string[]>;
+  filteredOptions: Observable<Lido[]>;
   selectedLido: string;
   lastTemperature: number;
+  openingHours: string;
 
   constructor(private readonly temperatureService: TemperatureService) {}
 
@@ -42,11 +29,10 @@ export class LidoSearchbarComponent implements OnInit {
     );
   }
 
-  private _filter(value: string): string[] {
+  private _filter(value: string): Lido[] {
     const filterValue = value.toLowerCase();
-
     return this.lidos.filter(option =>
-      option.toLowerCase().includes(filterValue)
+      option.name.toLowerCase().includes(filterValue)
     );
   }
 

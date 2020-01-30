@@ -21,6 +21,8 @@ import { LidoSearchbarComponent } from './components/lido-searchbar/lido-searchb
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { AboutComponent } from './components/about/about.component';
+import { AgmCoreModule } from '@agm/core';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,13 @@ import { AboutComponent } from './components/about/about.component';
     FooterComponent,
     CtaComponent,
     LidoSearchbarComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: environment.agmKey
+    }),
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
@@ -46,6 +52,7 @@ import { AboutComponent } from './components/about/about.component';
     HttpClientModule,
     BrowserAnimationsModule,
     ScrollingModule,
+    AgmCoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],

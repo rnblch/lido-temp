@@ -1,9 +1,13 @@
+// tslint:disable: ban-types
 export interface Lido {
-  id: string;
+  id?: string;
   name: string;
+  lat: Number;
+  long: Number;
   lastTemperature?: number;
   lastUpdated?: Date;
   openingHours?: Hours;
+  infoWindow?: string;
 }
 
 export interface Hours {

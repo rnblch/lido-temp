@@ -1,0 +1,14 @@
+h1 {
+  padding: 2rem;
+}
+
+.section-text-wrapper {
+  text-align: center;
+  align-self: center;
+}
+
+#map {
+  height: 400px;
+  margin: 3rem;
+  position: relative;
+}

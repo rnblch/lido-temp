@@ -1,6 +1,7 @@
-<form class="center-text-wrapper" fxLayout="column">
+<form fxLayout="column">
   <mat-form-field>
     <input
+      class="searchbar"
       [formControl]="lidoName"
       type="text"
       placeholder="Lido name"
@@ -15,9 +16,9 @@
     >
       <mat-option
         *ngFor="let option of filteredOptions | async"
-        [value]="option"
+        [value]="option.name"
       >
-        {{ option }}
+        {{ option.name }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>

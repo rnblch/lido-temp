@@ -1,0 +1,45 @@
+<section class="section background-eggshell">
+  <h1 class="ub700 center-text koa section-text-shadow">Contact</h1>
+  <div fxLayoutAlign="center center" fxLayout="column">
+    <form
+      id="form"
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      fxLayoutAlign="center"
+      fxLayout="column"
+    >
+      <mat-form-field>
+        <input matInput type="text" placeholder="Name" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          placeholder="Email"
+          formControlName="email"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <textarea
+          matInput
+          placeholder="Comments"
+          formControlName="message"
+        ></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="button background-glow koa"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Submit
+      </button>
+    </form>
+    <label *ngIf="thanksLabel" class="koa ub500" [@slideUp]
+      >Thanks, we'll be in touch soon.</label
+    >
+    <label *ngIf="errorLabel" class="koa ub500" [@slideUp]
+      >Uh oh. Something went wrong. Please try again.</label
+    >
+  </div>
+</section>
