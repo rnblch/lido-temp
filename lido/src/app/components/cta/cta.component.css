@@ -14,3 +14,9 @@ h1 {
 .landing {
   padding-top: 7rem;
 }
+
+@media (max-width: 48em) {
+  .pool-animation {
+    width: 117vw !important;
+  }
+}

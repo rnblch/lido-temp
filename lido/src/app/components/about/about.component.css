@@ -8,3 +8,10 @@
   margin: 3rem;
   position: relative;
 }
+
+@media (max-width: 48em) {
+  #map {
+    margin: 0.5rem;
+    margin-top: 3rem;
+  }
+}
