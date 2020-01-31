@@ -1,5 +1,3 @@
-import { AgmCoreModule } from '@agm/core';
-import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -30,6 +28,10 @@ import { LidoSearchbarComponent } from './components/lido-searchbar/lido-searchb
 import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/nav/nav.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SubmitComponent } from './components/submit/submit.component';
+import {
+    TemperatureDisplayComponent
+} from './components/temperature-display/temperature-display.component';
 
 @NgModule({
   declarations: [
@@ -42,12 +44,11 @@ import { SignupComponent } from './components/signup/signup.component';
     AboutComponent,
     ContactComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    SubmitComponent,
+    TemperatureDisplayComponent
   ],
   imports: [
-    AgmCoreModule.forRoot({
-      apiKey: environment.agmKey
-    }),
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
@@ -62,9 +63,7 @@ import { SignupComponent } from './components/signup/signup.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    ScrollingModule,
     MatListModule,
-    AgmCoreModule,
     MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule

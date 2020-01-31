@@ -1,0 +1,38 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.section {
+  height: 100vh;
+}
+
+h1 {
+  padding-left: 1rem;
+}
+
+h2 {
+  padding-bottom: 2rem;
+}
+
+.submit {
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+:host ::ng-deep .mat-form-field,
+.button {
+  width: 70vw !important;
+}
+
+@media (min-width: 48em) {
+  :host ::ng-deep .mat-form-field,
+  .button {
+    width: 50vw !important;
+  }
+}

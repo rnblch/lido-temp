@@ -12,13 +12,19 @@ html,
 body {
   height: 100%;
   width: 100%;
-  margin: 0ps;
+  margin: 0px;
   padding: 0px;
+  top: 0;
   overflow-x: hidden;
 }
 
 body {
   display: block;
+}
+
+.cdk-global-scrollblock {
+  position: static;
+  overflow: hidden !important;
 }
 
 input:-webkit-autofill,
@@ -34,10 +40,6 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #2f3764;
   -webkit-box-shadow: none;
   transition: background-color 5000s ease-in-out 0s;
-}
-
-#main {
-  display: block;
 }
 
 button {
@@ -63,6 +65,15 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+}
+
+h1 {
+  padding: 2rem;
+  font-size: 2.525rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 .ub400 {
@@ -172,4 +183,14 @@ textarea {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.button {
+  max-height: 45px;
+  border-radius: 35px;
+  display: inline-block;
+  border-radius: 2rem;
+  font-size: 0.9375rem;
+  border: none;
+  transition: all 0.3s ease;
 }

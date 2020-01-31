@@ -1,0 +1,40 @@
+<section class="section background-koa">
+  <h1 class="ub700 glow section-text-shadow" fxLayoutAlign="start">
+    Hi, Ran!
+  </h1>
+  <div class="submit" fxLayoutAlign="center center" fxLayout="column">
+    <h2 class="ub500 glow">
+      What's the temperature of your lido today?
+    </h2>
+    <app-lido-searchbar></app-lido-searchbar>
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+      fxLayoutAlign="center"
+      fxLayout="column"
+    >
+      <mat-form-field>
+        <input
+          type="number"
+          matInput
+          placeholder="Temperature (°C)"
+          formControlName="temperature"
+        />
+      </mat-form-field>
+      <button
+        mat-raised-button
+        class="button background-glow koa"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Submit
+      </button>
+    </form>
+    <label *ngIf="thanksLabel" class="koa ub500" [@slideUp]
+      >Thanks for your help today!</label
+    >
+    <label *ngIf="errorLabel" class="koa ub500" [@slideUp]
+      >Uh oh. Something went wrong. Please try again.</label
+    >
+  </div>
+</section>

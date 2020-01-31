@@ -19,7 +19,8 @@ export class NavComponent implements OnInit {
     this.dialog.open(LoginComponent, {
       height: '48vh',
       width: '24em',
-      disableClose: false
+      disableClose: false,
+      hasBackdrop: true
     });
   }
 
@@ -27,7 +28,8 @@ export class NavComponent implements OnInit {
     this.dialog.open(SignupComponent, {
       height: '65vh',
       width: '24em',
-      disableClose: false
+      disableClose: false,
+      hasBackdrop: true
     });
   }
 
