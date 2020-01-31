@@ -57,6 +57,7 @@ a {
 
 .sidenav {
   width: 35vw;
+  padding-top: 3rem;
 }
 
 .sidenav-item {
