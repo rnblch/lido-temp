@@ -1,0 +1,49 @@
+<mat-dialog-content>
+  <h1 mat-dialog-title class="koa ub700" fxLayoutAlign="center center">
+    Do you work for a London lido?
+  </h1>
+  <h2 class="koa ub500">
+    Sign up here to submit temperatures and help Londoners plan their next swim.
+  </h2>
+  <form fxLayout="column">
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Email"
+        [(ngModel)]="email"
+        type="email"
+        name="email"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Username"
+        [(ngModel)]="username"
+        type="text"
+        name="username"
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Password"
+        [(ngModel)]="password"
+        type="password"
+        name="password"
+        required
+      />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions fxLayoutAlign="center">
+  <button
+    class="background-koa white ub500"
+    mat-raised-button
+    (click)="login()"
+  >
+    Sign up
+  </button>
+</mat-dialog-actions>

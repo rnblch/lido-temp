@@ -1,21 +1,68 @@
-<mat-toolbar class="navbar">
-  <a href="/"
-    ><img
-      class="nav-logo-mobile"
-      width="46"
-      height="46"
-      src="../../assets/lido-favicon.svg"
-    />
-  </a>
-  <ul title="Main Menu" class="nav-list">
-    <li class="nav-item">
-      <a href="/about" class="nav-link eggshell ub500">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="/contact" class="nav-link eggshell ub500">Contact</a>
-    </li>
-    <li class="nav-item">
-      <a href="/login" class="nav-link eggshell ub500">Login</a>
-    </li>
-  </ul>
-</mat-toolbar>
+<div>
+  <div class="nav-container">
+    <mat-toolbar class="navbar-desktop" aria-role="navigation">
+      <a href="/"
+        ><img
+          class="nav-logo-mobile"
+          width="46"
+          height="46"
+          src="../../assets/lido-favicon.svg"
+        />
+      </a>
+      <button
+        mat-icon-button
+        (click)="sidenav.toggle()"
+        fxShow="true"
+        fxHide.gt-sm
+        aria-label="Side nav toggle icon"
+      >
+        <mat-icon class="icon glow">menu</mat-icon>
+      </button>
+      <div fxShow="true" fxHide.lt-md>
+        <ul title="Main Menu" class="nav-list">
+          <li class="nav-item">
+            <a (click)="scrollTo('about')" class="nav-link eggshell ub500"
+              >About</a
+            >
+          </li>
+          <li class="nav-item">
+            <a (click)="scrollTo('contact')" class="nav-link eggshell ub500"
+              >Contact</a
+            >
+          </li>
+          <li class="nav-item">
+            <a (click)="openLoginDialog()" class="nav-link eggshell ub500"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a (click)="openSignupDialog()" class="nav-link eggshell ub500"
+              >Signup</a
+            >
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar>
+  </div>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav class="sidenav background-glow" position="end" #sidenav>
+      <mat-nav-list fxLayout="column">
+        <ul title="Main Menu">
+          <li class="sidenav-item koa">
+            <a (click)="scrollTo('about')" class="nav-link ub500">About</a>
+          </li>
+          <li class="sidenav-item koa">
+            <a (click)="scrollTo('contact')" class="nav-link ub500">Contact</a>
+          </li>
+          <li class="sidenav-item koa">
+            <a (click)="openLoginDialog()" class="nav-link ub500">Login</a>
+          </li>
+          <li class="sidenav-item koa">
+            <a (click)="openSignupDialog()" class="nav-link ub500">Signup</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

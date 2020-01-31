@@ -151,7 +151,7 @@ textarea {
 }
 
 .section {
-  min-height: 85vh;
+  min-height: 100vh;
   padding: 3rem;
 }
 
@@ -165,4 +165,11 @@ textarea {
 
 .map-info {
   padding-bottom: 1rem;
+}
+
+.sidenav-container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
