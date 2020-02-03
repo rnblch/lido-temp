@@ -1,6 +1,6 @@
 <mat-dialog-content>
   <h1 mat-dialog-title class="koa ub700" fxLayoutAlign="center center">
-    Do you work for a London lido?
+    Do you work for a London swimming venue?
   </h1>
   <h2 class="koa ub500">
     Sign up here to submit temperatures and help Londoners plan their next swim.
@@ -20,10 +20,10 @@
     <mat-form-field>
       <input
         matInput
-        placeholder="Username"
-        [(ngModel)]="username"
+        placeholder="Display name"
+        [(ngModel)]="displayName"
         type="text"
-        name="username"
+        name="displayName"
         autocomplete="username"
         required
       />
@@ -42,11 +42,20 @@
   </form>
 </mat-dialog-content>
 <mat-dialog-actions fxLayoutAlign="center">
-  <button
-    class="background-koa white ub500"
-    mat-raised-button
-    (click)="login()"
-  >
-    Sign up
-  </button>
+  <div class="signup-button-modal">
+    <button
+      class="background-koa white ub500"
+      mat-raised-button
+      (click)="signup()"
+      fxFlexFill
+    >
+      Sign up
+    </button>
+  </div>
+  <div class="label">
+    <label *ngIf="isEmailInvalid" class="nah ub500" [@slideUp]
+      >Uh oh. Your email tells us you may not be a swimming venue. Try again
+      with your work email?</label
+    >
+  </div>
 </mat-dialog-actions>

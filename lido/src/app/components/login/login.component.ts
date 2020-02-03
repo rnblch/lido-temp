@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material';
+
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,11 +9,7 @@ import { MatDialogRef } from '@angular/material';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  constructor(private dialogRef: MatDialogRef<LoginComponent>) {}
+  constructor(public authService: AuthService) {}
 
   ngOnInit() {}
-
-  login() {
-    this.dialogRef.close();
-  }
 }

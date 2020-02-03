@@ -1,6 +1,11 @@
 <section class="section background-koa">
   <h1 class="ub700 glow section-text-shadow" fxLayoutAlign="start">
-    Hi, Ran!
+    Hi,
+    {{
+      authService.userData.displayName
+        ? authService.userData.displayName
+        : 'User'
+    }}!
   </h1>
   <div class="submit" fxLayoutAlign="center center" fxLayout="column">
     <h2 class="ub500 glow">

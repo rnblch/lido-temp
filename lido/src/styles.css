@@ -137,11 +137,11 @@ h2 {
   background-color: #2f3764;
 }
 
-.eggshell {
+.white {
   color: #debaa7;
 }
 
-.background-eggshell {
+.background-white {
   background-color: #debaa7;
 }
 
@@ -151,6 +151,14 @@ h2 {
 
 .background-white {
   background-color: white;
+}
+
+.nah {
+  color: #e54b4b;
+}
+
+.background-nah {
+  background-color: #e54b4b;
 }
 
 .full-width {
@@ -193,4 +201,15 @@ h2 {
   font-size: 0.9375rem;
   border: none;
   transition: all 0.3s ease;
+}
+
+.modal-link:hover {
+  color: #ce7c16;
+  cursor: pointer;
+}
+
+.modal-link-container {
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+  text-align: center;
 }

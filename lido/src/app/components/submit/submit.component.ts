@@ -3,6 +3,8 @@ import { ContactService } from 'src/app/services/contact.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-submit',
   templateUrl: './submit.component.html',
@@ -18,7 +20,10 @@ export class SubmitComponent implements OnInit {
   thanksLabel: boolean;
   errorLabel: boolean;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    public authService: AuthService
+  ) {
     this.createForm();
   }
   ngOnInit() {}

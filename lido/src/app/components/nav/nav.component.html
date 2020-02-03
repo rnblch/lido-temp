@@ -28,12 +28,19 @@
               >Contact</a
             >
           </li>
-          <li class="nav-item">
-            <a (click)="openLoginDialog()" class="nav-link glow ub500">Login</a>
+          <li class="nav-item" *ngIf="!authService.userData as user">
+            <a (click)="openLoginDialog()" class="nav-link glow ub500"
+              >Log in</a
+            >
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="!authService.userData as user">
             <a (click)="openSignupDialog()" class="nav-link glow ub500"
               >Signup</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="authService.userData as user">
+            <a (click)="authService.signOut()" class="nav-link glow ub500"
+              >Sign Out</a
             >
           </li>
         </ul>
@@ -51,11 +58,16 @@
           <li class="sidenav-item koa">
             <a (click)="scrollTo('contact')" class="nav-link ub500">Contact</a>
           </li>
-          <li class="sidenav-item koa">
-            <a (click)="openLoginDialog()" class="nav-link ub500">Login</a>
+          <li class="sidenav-item koa" *ngIf="!authService.userData as user">
+            <a (click)="openLoginDialog()" class="nav-link ub500">Log in</a>
           </li>
-          <li class="sidenav-item koa">
+          <li class="sidenav-item koa" *ngIf="!authService.userData as user">
             <a (click)="openSignupDialog()" class="nav-link ub500">Signup</a>
+          </li>
+          <li class="sidenav-item koa" *ngIf="authService.userData as user">
+            <a (click)="authService.SignOut()" class="nav-link ub500"
+              >Log out</a
+            >
           </li>
         </ul>
       </mat-nav-list>

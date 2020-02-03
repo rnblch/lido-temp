@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +24,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CtaComponent } from './components/cta/cta.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { LidoSearchbarComponent } from './components/lido-searchbar/lido-searchbar.component';
 import { LoginComponent } from './components/login/login.component';
@@ -32,6 +34,9 @@ import { SubmitComponent } from './components/submit/submit.component';
 import {
     TemperatureDisplayComponent
 } from './components/temperature-display/temperature-display.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { AuthService } from './services/auth.service';
+import { SidenavService } from './services/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,9 @@ import {
     LoginComponent,
     SignupComponent,
     SubmitComponent,
-    TemperatureDisplayComponent
+    TemperatureDisplayComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
@@ -66,9 +73,13 @@ import {
     MatListModule,
     MatSidenavModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireModule,
+    AngularFireAuthModule
   ],
   providers: [
+    AuthService,
+    SidenavService,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
   ],
   entryComponents: [LoginComponent, SignupComponent],

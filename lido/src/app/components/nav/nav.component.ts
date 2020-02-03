@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
 
+import { AuthService } from '../../services/auth.service';
 import { LoginComponent } from '../login/login.component';
 import { SignupComponent } from '../signup/signup.component';
 
@@ -11,13 +13,17 @@ import { SignupComponent } from '../signup/signup.component';
 })
 export class NavComponent implements OnInit {
   @ViewChild('sidenav', { static: false }) sidenav: any;
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    public authService: AuthService,
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
   openLoginDialog(): void {
     this.dialog.open(LoginComponent, {
-      height: '48vh',
+      height: 'auto',
       width: '24em',
       disableClose: false,
       hasBackdrop: true
@@ -26,7 +32,7 @@ export class NavComponent implements OnInit {
 
   openSignupDialog(): void {
     this.dialog.open(SignupComponent, {
-      height: '65vh',
+      height: 'auto',
       width: '24em',
       disableClose: false,
       hasBackdrop: true

@@ -1,0 +1,32 @@
+<section class="section" fxLayout="column" fxLayoutAlign="center">
+  <h1 class="koa center-text ub700 section-text-shadow">
+    Thanks for joining Lidotemp!
+  </h1>
+
+  <div
+    class="center-text-wrapper koa"
+    *ngIf="authService.userData as user"
+    fxLayout="column"
+  >
+    <h2 class="ub500">
+      We have sent a confirmation email to <strong>{{ user.email }}</strong
+      >.
+    </h2>
+    <h2 class="ub500">
+      Please check your email and click on the link to verify your email
+      address.
+    </h2>
+  </div>
+
+  <div class="center-text-wrapper">
+    <button
+      mat-raised-button
+      type="button"
+      class="button ub400 glow background-koa"
+      (click)="authService.sendVerificationMail()"
+    >
+      <i></i>
+      Resend Verification Email
+    </button>
+  </div>
+</section>

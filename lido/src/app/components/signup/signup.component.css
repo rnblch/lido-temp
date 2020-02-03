@@ -7,3 +7,12 @@ h2 {
 h2 {
   font-size: 1rem;
 }
+
+.signup-button-modal {
+  padding-bottom: 1.25rem;
+}
+
+.label {
+  text-align: center;
+  padding-bottom: 1rem;
+}
