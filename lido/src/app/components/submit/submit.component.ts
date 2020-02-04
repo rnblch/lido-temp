@@ -21,7 +21,9 @@ export class SubmitComponent implements OnInit {
   ) {
     this.createForm();
   }
-  ngOnInit() {}
+  ngOnInit() {
+    window.scroll(0, 0);
+  }
 
   createForm() {
     this.form = this.formBuilder.group({
