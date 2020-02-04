@@ -24,7 +24,7 @@ export class NavComponent implements OnInit {
   openLoginDialog(): void {
     this.dialog.open(LoginComponent, {
       height: 'auto',
-      width: '24rem',
+      width: '30rem',
       disableClose: false,
       hasBackdrop: true,
       panelClass: 'dialog-container'
