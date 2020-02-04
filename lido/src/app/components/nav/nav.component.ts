@@ -24,18 +24,20 @@ export class NavComponent implements OnInit {
   openLoginDialog(): void {
     this.dialog.open(LoginComponent, {
       height: 'auto',
-      width: '80vw',
+      width: '24rem',
       disableClose: false,
-      hasBackdrop: true
+      hasBackdrop: true,
+      panelClass: 'dialog-container'
     });
   }
 
   openSignupDialog(): void {
     this.dialog.open(SignupComponent, {
       height: 'auto',
-      width: '80vw',
+      width: '24rem',
       disableClose: false,
-      hasBackdrop: true
+      hasBackdrop: true,
+      panelClass: 'dialog-container'
     });
   }
 
