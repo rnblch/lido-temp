@@ -3,7 +3,7 @@
     Hi,
     {{ authService.userData ? authService.userData.displayName : 'User' }}!
   </h1>
-  <div class="submit" fxLayoutAlign="center" fxLayout="column">
+  <div class="submit" fxLayoutAlign="center center" fxLayout="column">
     <h2 class="ub500 cambridge">
       What's the temperature of your swimming venue today?
     </h2>
@@ -11,7 +11,7 @@
     <form
       [formGroup]="form"
       (ngSubmit)="onSubmit()"
-      fxLayoutAlign="center"
+      fxLayoutAlign="center center"
       fxLayout="column"
     >
       <mat-form-field>
