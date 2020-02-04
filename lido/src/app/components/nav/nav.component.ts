@@ -34,7 +34,7 @@ export class NavComponent implements OnInit {
   openSignupDialog(): void {
     this.dialog.open(SignupComponent, {
       height: 'auto',
-      width: '24rem',
+      width: '30rem',
       disableClose: false,
       hasBackdrop: true,
       panelClass: 'dialog-container'
