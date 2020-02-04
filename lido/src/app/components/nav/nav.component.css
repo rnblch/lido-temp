@@ -61,3 +61,9 @@ a {
 .mat-drawer-container {
   position: static;
 }
+
+@media (min-device-width: 768px) and (max-device-width: 768px) {
+  .home-button {
+    margin-left: 10vw;
+  }
+}

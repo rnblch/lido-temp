@@ -162,10 +162,6 @@ h2 {
   max-height: 220px !important;
 }
 
-.section {
-  min-height: 80vh;
-}
-
 .section-text {
   font-size: 1.75rem;
 }

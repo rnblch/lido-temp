@@ -41,3 +41,9 @@ input {
 :host ::ng-deep .mat-form-field {
   color: #124559;
 }
+
+@media (max-width: 62em) {
+  h1 {
+    font-size: 1.625rem;
+  }
+}

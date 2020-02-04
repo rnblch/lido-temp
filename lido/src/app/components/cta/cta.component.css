@@ -10,10 +10,6 @@ h1 {
   padding-top: 8rem;
 }
 
-.pool-animation {
-  width: 50vw;
-}
-
 input {
   color: #124559;
 }
@@ -74,7 +70,11 @@ input:focus {
 }
 
 @media (max-width: 62em) {
-  .pool-animation {
+  .cta-hero {
     width: 100vw !important;
+  }
+
+  h1 {
+    font-size: 1.625rem;
   }
 }

@@ -10,7 +10,7 @@
 .section-text {
   padding-right: 7rem;
   padding-left: 7rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 
 #map {
@@ -30,5 +30,10 @@
   .section-text {
     padding-left: 2rem;
     padding-right: 2rem;
+    font-size: 1.25rem;
+  }
+
+  .center-text {
+    font-size: 1.625rem;
   }
 }

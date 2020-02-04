@@ -24,7 +24,7 @@ export class NavComponent implements OnInit {
   openLoginDialog(): void {
     this.dialog.open(LoginComponent, {
       height: 'auto',
-      width: '24em',
+      width: '80vw',
       disableClose: false,
       hasBackdrop: true
     });
@@ -33,7 +33,7 @@ export class NavComponent implements OnInit {
   openSignupDialog(): void {
     this.dialog.open(SignupComponent, {
       height: 'auto',
-      width: '24em',
+      width: '80vw',
       disableClose: false,
       hasBackdrop: true
     });
