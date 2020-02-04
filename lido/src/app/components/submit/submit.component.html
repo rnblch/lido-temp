@@ -1,14 +1,10 @@
-<section class="section background-koa">
-  <h1 class="ub700 glow section-text-shadow" fxLayoutAlign="start">
+<section class="section background-midnight">
+  <h1 class="ub700 cambridge section-text-shadow" fxLayoutAlign="start">
     Hi,
-    {{
-      authService.userData.displayName
-        ? authService.userData.displayName
-        : 'User'
-    }}!
+    {{ authService.userData ? authService.userData.displayName : 'User' }}!
   </h1>
-  <div class="submit" fxLayoutAlign="center center" fxLayout="column">
-    <h2 class="ub500 glow">
+  <div class="submit" fxLayoutAlign="center" fxLayout="column">
+    <h2 class="ub500 cambridge">
       What's the temperature of your lido today?
     </h2>
     <app-lido-searchbar></app-lido-searchbar>
@@ -24,21 +20,21 @@
           matInput
           placeholder="Temperature (°C)"
           formControlName="temperature"
+          (keydown.enter)="onSubmit()"
         />
       </mat-form-field>
       <button
         mat-raised-button
-        class="button background-glow koa"
+        class="button background-cambridge midnight"
         type="submit"
-        [disabled]="form.invalid"
       >
         Submit
       </button>
     </form>
-    <label *ngIf="thanksLabel" class="koa ub500" [@slideUp]
+    <label *ngIf="thanksLabel" class="cambridge ub500" [@slideUp]
       >Thanks for your help today!</label
     >
-    <label *ngIf="errorLabel" class="koa ub500" [@slideUp]
+    <label *ngIf="errorLabel" class="nah ub500" [@slideUp]
       >Uh oh. Something went wrong. Please try again.</label
     >
   </div>

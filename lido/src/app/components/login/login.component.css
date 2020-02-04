@@ -4,7 +4,7 @@ h3 {
 }
 
 input {
-  color: #2f3764;
+  color: #142733;
 }
 
 :host ::ng-deep .mat-focused .mat-form-field-label {
@@ -12,7 +12,7 @@ input {
 }
 
 :host ::ng-deep .mat-form-field-label {
-  color: #2f3764 !important;
+  color: #142733 !important;
   font-family: 'Ubuntu', sans-serif !important;
 }
 
@@ -21,11 +21,11 @@ input {
 }
 
 :host ::ng-deep .mat-form-field-underline {
-  background-color: #2f3764 !important;
+  background-color: #142733 !important;
 }
 
 :host ::ng-deep .mat-option-text {
-  color: #2f3764 !important;
+  color: #142733 !important;
   font-family: 'Ubuntu', sans-serif !important;
   font-weight: 500;
 }

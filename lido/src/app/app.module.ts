@@ -5,6 +5,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogRef, MatSidenav } from '@angular/material';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -23,7 +24,6 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CtaComponent } from './components/cta/cta.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { LidoSearchbarComponent } from './components/lido-searchbar/lido-searchbar.component';
@@ -43,7 +43,6 @@ import { SidenavService } from './services/sidenav.service';
     AppComponent,
     HomeComponent,
     NavComponent,
-    FooterComponent,
     CtaComponent,
     LidoSearchbarComponent,
     AboutComponent,
@@ -80,7 +79,11 @@ import { SidenavService } from './services/sidenav.service';
   providers: [
     AuthService,
     SidenavService,
-    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } },
+    {
+      provide: MatDialogRef,
+      useValue: {}
+    }
   ],
   entryComponents: [LoginComponent, SignupComponent],
   bootstrap: [AppComponent]

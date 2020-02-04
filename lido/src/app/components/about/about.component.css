@@ -3,15 +3,32 @@
   align-self: center;
 }
 
+#about {
+  padding: 3rem;
+}
+
+.section-text {
+  padding-right: 7rem;
+  padding-left: 7rem;
+  padding-bottom: 3rem;
+}
+
 #map {
   height: 400px;
-  margin: 3rem;
   position: relative;
 }
 
-@media (max-width: 48em) {
+@media (max-width: 62em) {
   #map {
-    margin: 0.5rem;
     margin-top: 3rem;
+  }
+
+  #about {
+    padding: 1rem;
+  }
+
+  .section-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

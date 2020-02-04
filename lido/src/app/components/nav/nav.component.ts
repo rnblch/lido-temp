@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSidenav } from '@angular/material';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
@@ -12,11 +12,11 @@ import { SignupComponent } from '../signup/signup.component';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  @ViewChild('sidenav', { static: false }) sidenav: any;
+  @ViewChild('sidenav', { static: false }) sidenav: MatSidenav;
   constructor(
     public dialog: MatDialog,
     public authService: AuthService,
-    private router: Router
+    public router: Router
   ) {}
 
   ngOnInit() {}
@@ -42,5 +42,21 @@ export class NavComponent implements OnInit {
   scrollTo(sectionID: string) {
     this.sidenav.close();
     document.getElementById(sectionID).scrollIntoView({ behavior: 'smooth' });
+  }
+
+  shouldShowNav() {
+    return (
+      !this.router.url.includes('verify-email') &&
+      !this.router.url.includes('forgot-password')
+    );
+  }
+
+  goTo(sectionID: string) {
+    if (this.authService.isLoggedIn) {
+      this.router.navigate([sectionID]);
+    } else {
+      this.scrollTo(sectionID);
+    }
+    this.sidenav.close();
   }
 }

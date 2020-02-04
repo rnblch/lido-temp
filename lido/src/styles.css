@@ -20,6 +20,7 @@ body {
 
 body {
   display: block;
+  background-color: #a3c7bd;
 }
 
 .cdk-global-scrollblock {
@@ -113,36 +114,28 @@ h2 {
   background-color: #ffbf26;
 }
 
-.comfort {
-  color: #f3a8a9;
+.cambridge {
+  color: #a3c7bd;
 }
 
-.background-comfort {
-  background-color: #f3a8a9;
+.background-cambridge {
+  background-color: #a3c7bd;
 }
 
-.ochre {
-  color: #ce7c16;
+.aqua {
+  color: #124559;
 }
 
-.background-ochre {
-  background-color: #ce7c16;
+.background-aqua {
+  background-color: #124559;
 }
 
-.koa {
-  color: #2f3764;
+.midnight {
+  color: #142733;
 }
 
-.background-koa {
-  background-color: #2f3764;
-}
-
-.white {
-  color: #debaa7;
-}
-
-.background-white {
-  background-color: #debaa7;
+.background-midnight {
+  background-color: #142733;
 }
 
 .white {
@@ -170,8 +163,7 @@ h2 {
 }
 
 .section {
-  min-height: 100vh;
-  padding: 3rem;
+  min-height: 80vh;
 }
 
 .section-text {
@@ -179,7 +171,7 @@ h2 {
 }
 
 .section-text-shadow {
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  text-shadow: -1px 1px 2px rgba(5, 23, 81, 0.43);
 }
 
 .map-info {
@@ -204,7 +196,7 @@ h2 {
 }
 
 .modal-link:hover {
-  color: #ce7c16;
+  color: #ffbf26;
   cursor: pointer;
 }
 
@@ -212,4 +204,9 @@ h2 {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
   text-align: center;
+}
+
+.info-window-title {
+  font-size: 1rem;
+  padding: 0;
 }

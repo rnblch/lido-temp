@@ -10,6 +10,7 @@ input[type='number'] {
 
 .section {
   height: 100vh;
+  padding: 3rem;
 }
 
 h1 {
@@ -23,6 +24,60 @@ h2 {
 .submit {
   padding-top: 2rem;
   padding-left: 1rem;
+}
+
+app-lido-searchbar {
+  color: #a3c7bd !important;
+}
+
+input {
+  color: #a3c7bd;
+}
+
+:host ::ng-deep .mat-focused .mat-form-field-label {
+  color: #ffbf26 !important;
+}
+
+:host ::ng-deep .mat-form-field-label {
+  color: #ffbf26 !important;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+:host ::ng-deep .mat-form-field-underline .mat-form-field-ripple {
+  background-color: #a3c7bd !important;
+}
+
+:host ::ng-deep .mat-form-field-underline {
+  background-color: #a3c7bd !important;
+}
+
+:host ::ng-deep .mat-option-text {
+  color: #a3c7bd !important;
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 500;
+}
+
+:host ::ng-deep input::-webkit-input-placeholder {
+  color: #a3c7bd !important;
+}
+
+:host ::ng-deep input:-moz-placeholder {
+  color: #a3c7bd !important;
+}
+
+:host ::ng-deep input::-moz-placeholder {
+  color: #a3c7bd !important;
+}
+
+:host ::ng-deep input:-ms-input-placeholder {
+  color: #a3c7bd !important;
+}
+
+:host
+  ::ng-deep
+  .mat-form-field-appearance-outline
+  .mat-form-field-outline-thick {
+  color: #a3c7bd !important;
 }
 
 :host ::ng-deep .mat-form-field,

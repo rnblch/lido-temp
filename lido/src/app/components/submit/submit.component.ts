@@ -1,5 +1,3 @@
-import { ContactService } from 'src/app/services/contact.service';
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -8,10 +6,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-submit',
   templateUrl: './submit.component.html',
-  styleUrls: [
-    './submit.component.css',
-    '../lido-searchbar/lido-searchbar.component.css'
-  ]
+  styleUrls: ['./submit.component.css']
 })
 export class SubmitComponent implements OnInit {
   form: FormGroup;
@@ -36,9 +31,11 @@ export class SubmitComponent implements OnInit {
   }
 
   onSubmit() {
+    /*
     const { lidoName, temperature } = this.form.value;
     const date = Date();
     const formRequest = { lidoName, temperature, date };
     this.form.reset();
+    */
   }
 }

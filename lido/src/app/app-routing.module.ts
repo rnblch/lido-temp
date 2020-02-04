@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { HomeComponent } from './components/home/home.component';
 import { SubmitComponent } from './components/submit/submit.component';
@@ -9,17 +11,19 @@ import { SecureInnerPagesGuard } from './guards/secure-inner-pages.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'submit', component: SubmitComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
+  {
+    path: 'submit',
+    component: SubmitComponent
+  },
   {
     path: 'forgot-password',
-    component: ForgotPasswordComponent,
-    canActivate: [SecureInnerPagesGuard]
+    component: ForgotPasswordComponent
   },
   {
     path: 'verify-email',
-    component: VerifyEmailComponent,
-    canActivate: [SecureInnerPagesGuard]
+    component: VerifyEmailComponent
   }
 ];
 

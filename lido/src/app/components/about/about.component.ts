@@ -1,12 +1,7 @@
 /// <reference types="@types/googlemaps" />
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 import { LidoList } from '../lido-list';
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  ViewChild,
-  ElementRef
-} from '@angular/core';
 
 declare let google: any;
 

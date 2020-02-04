@@ -7,18 +7,18 @@
 }
 
 .navbar-desktop {
-  background-color: #2f3764;
+  background-color: #142733;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .icon {
   font-size: 2rem;
+  margin-left: -2rem;
+  margin-top: -0.25em;
 }
 
 .icon:active {
-  color: #debaa7;
+  color: #ffcf0f;
 }
 
 .nav-list {
@@ -33,7 +33,7 @@
 }
 
 .nav-link:hover {
-  color: #debaa7 !important;
+  color: #ffcf0f !important;
 }
 
 .nav-link {
@@ -47,12 +47,6 @@ a {
   transition: color 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
   background-color: transparent;
-}
-
-.nav-logo-mobile {
-  margin-top: 0.15rem;
-  padding-left: 0.5rem;
-  margin-left: -0.5rem;
 }
 
 .sidenav {

@@ -1,8 +1,8 @@
 <mat-dialog-content>
-  <h1 mat-dialog-title class="koa ub700" fxLayoutAlign="center center">
+  <h1 mat-dialog-title class="midnight ub700" fxLayoutAlign="center">
     Do you work for a London swimming venue?
   </h1>
-  <h2 class="koa ub500">
+  <h2 class="midnight ub500">
     Sign up here to submit temperatures and help Londoners plan their next swim.
   </h2>
   <form fxLayout="column">
@@ -36,6 +36,7 @@
         type="password"
         name="password"
         autocomplete="new-password"
+        (keydown.enter)="signup()"
         required
       />
     </mat-form-field>
@@ -44,7 +45,7 @@
 <mat-dialog-actions fxLayoutAlign="center">
   <div class="signup-button-modal">
     <button
-      class="background-koa white ub500"
+      class="background-midnight white ub500"
       mat-raised-button
       (click)="signup()"
       fxFlexFill

@@ -1,10 +1,10 @@
 <section class="section" fxLayout="column" fxLayoutAlign="center">
-  <h1 class="koa center-text ub700 section-text-shadow">
+  <h1 class="midnight center-text ub700 section-text-shadow">
     Thanks for joining Lidotemp!
   </h1>
 
   <div
-    class="center-text-wrapper koa"
+    class="center-text-wrapper midnight"
     *ngIf="authService.userData as user"
     fxLayout="column"
   >
@@ -22,11 +22,14 @@
     <button
       mat-raised-button
       type="button"
-      class="button ub400 glow background-koa"
+      class="button ub400 glow background-midnight"
       (click)="authService.sendVerificationMail()"
     >
       <i></i>
       Resend Verification Email
     </button>
   </div>
+  <h3 class="midnight ub700" fxLayoutAlign="center">
+    <a href="/" class="midnight modal-link"> Go home?</a>
+  </h3>
 </section>

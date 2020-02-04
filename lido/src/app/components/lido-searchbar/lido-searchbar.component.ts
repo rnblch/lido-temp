@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { FormControl } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
+
+import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+import { Lido } from '../../models/Lido';
 import { TemperatureService } from '../../services/temperature.service';
 import { LidoList } from '../lido-list';
-import { Lido } from '../../models/Lido';
 
 @Component({
   selector: 'app-lido-searchbar',
@@ -37,9 +39,9 @@ export class LidoSearchbarComponent implements OnInit {
   }
 
   getTemperature(option: string) {
-    this.temperatureService.getTemperature(option).subscribe(lido => {
+    /* this.temperatureService.getTemperature(option).subscribe(lido => {
       this.selectedLido = lido.name;
       this.lastTemperature = lido.lastTemperature;
-    });
+    }); */
   }
 }

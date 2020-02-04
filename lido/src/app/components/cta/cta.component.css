@@ -5,18 +5,76 @@ h1 {
   padding-right: 0;
 }
 
+.cta {
+  padding: 3rem;
+  padding-top: 8rem;
+}
+
 .pool-animation {
-  height: 80vh;
-  position: relative;
-  padding: 3.5rem;
+  width: 50vw;
 }
 
-.landing {
-  padding-top: 7rem;
+input {
+  color: #124559;
 }
 
-@media (max-width: 48em) {
+input:focus {
+  color: #142733;
+}
+
+:host ::ng-deep app-lido-searchbar .mat-focused .mat-form-field-label {
+  color: #124559 !important;
+}
+
+:host ::ng-deep app-lido-searchbar .mat-form-field-label {
+  color: #124559 !important;
+  font-family: 'Ubuntu', sans-serif !important;
+}
+
+:host
+  ::ng-deep
+  app-lido-searchbar
+  .mat-form-field-underline
+  .mat-form-field-ripple {
+  background-color: #124559 !important;
+}
+
+:host ::ng-deep app-lido-searchbar .mat-form-field-underline {
+  background-color: #124559 !important;
+}
+
+:host ::ng-deep app-lido-searchbar .mat-option-text {
+  color: #142733 !important;
+  font-family: 'Ubuntu', sans-serif !important;
+  font-weight: 500;
+}
+
+:host ::ng-deep app-lido-searchbar input::-webkit-input-placeholder {
+  color: #124559 !important;
+}
+
+:host ::ng-deep app-lido-searchbar input:-moz-placeholder {
+  color: #124559 !important;
+}
+
+:host ::ng-deep app-lido-searchbar input::-moz-placeholder {
+  color: #124559 !important;
+}
+
+:host ::ng-deep app-lido-searchbar input:-ms-input-placeholder {
+  color: #124559 !important;
+}
+
+:host
+  ::ng-deep
+  app-lido-searchbar
+  .mat-form-field-appearance-outline
+  .mat-form-field-outline-thick {
+  color: #142733 !important;
+}
+
+@media (max-width: 62em) {
   .pool-animation {
-    width: 117vw !important;
+    width: 100vw !important;
   }
 }

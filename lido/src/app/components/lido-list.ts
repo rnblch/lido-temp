@@ -3,7 +3,7 @@ export const LidoList = [
     name: 'Beckenham Place',
     lat: 51.41922,
     long: -0.02181,
-    infoWindow: `<h1 class="ub700"> Beckenham Place</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Beckenham Place</h1>
     <p class="ub400 map-info"> Capital Ring, Beckenham BR3 1UL, United Kingdom </p>
     <p class="ub700"> Opening Hours:</p>
     <p class="ub400">Monday	7AM–6PM</p>
@@ -18,7 +18,7 @@ export const LidoList = [
     name: 'Brockwell',
     lat: 51.45547,
     long: -0.11052,
-    infoWindow: `<h1 class="ub700"> Brockwell</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Brockwell</h1>
     <p class="ub400 map-info"> Brockwell Park, Dulwich Rd, Brixton, London SE24 0PA, United Kingdom </p>
     <p class="ub700"> Opening Hours:</p>
     <p class="ub400">Monday	6:30AM–10PM</p>
@@ -33,7 +33,7 @@ export const LidoList = [
     name: 'Charlton',
     lat: 51.47395,
     long: 0.03994,
-    infoWindow: `<h1 class="ub700"> Charlton</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Charlton</h1>
     <p class="ub400 map-info"> Hornfair Park, Shooters Hill Rd, London SE18 4LX, United Kingdom </p>
     <p class="ub700"> Opening Hours:</p>
     <p class="ub400">Monday	6:00AM–10PM</p>
@@ -48,7 +48,7 @@ export const LidoList = [
     name: 'Finchley',
     lat: 51.60458,
     long: -0.17344,
-    infoWindow: `<h1 class="ub700"> Finchley</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Finchley</h1>
         <p class="ub400 map-info"> Great North Leisure Park Chaplin Square, London N12 0GL, United Kingdom </p>
         <p class="ub700"> Opening Hours:</p>
         <p class="ub400">Monday	6:45AM–10PM</p>
@@ -63,7 +63,7 @@ export const LidoList = [
     name: 'Hampstead Heath - Men',
     lat: 51.5613,
     long: -0.15057,
-    infoWindow: `<h1 class="ub700"> Hampstead Heath - Men</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Hampstead Heath - Men</h1>
         <p class="ub400 map-info"> Parliament Hill Fields, Fields Hampstead Heath, Highgate Rd, London NW5 1QR, United Kingdom
         </p>
         <p class="ub700"> Opening Hours:</p>
@@ -79,7 +79,7 @@ export const LidoList = [
     name: 'Hampstead Heath - Women',
     lat: 51.56019,
     long: -0.17191,
-    infoWindow: `<h1 class="ub700"> Hampstead Heath - Women </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Hampstead Heath - Women </h1>
     <p class="ub400 map-info"> Kenwood Ladies Pond, Hampstead Heath, London NW5 1QR, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -95,7 +95,7 @@ export const LidoList = [
     name: 'Hampstead Heath - Mixed',
     lat: 51.56376,
     long: -0.19578,
-    infoWindow: `<h1 class="ub700"> Hampstead Heath - Mixed </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Hampstead Heath - Mixed </h1>
     <p class="ub400 map-info"> Hampstead Heath, Hampstead, London NW5 1QR, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -111,7 +111,7 @@ export const LidoList = [
     name: 'London Fields',
     lat: 51.54215,
     long: -0.06194,
-    infoWindow: `<h1 class="ub700"> London Fields </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> London Fields </h1>
     <p class="ub400 map-info"> London Fields West Side, London E8 3EU, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -127,7 +127,7 @@ export const LidoList = [
     name: 'Oasis',
     lat: 51.51466,
     long: -0.12476,
-    infoWindow: `<h1 class="ub700"> Oasis </h1>
+    infoWindow: `<h1 class="info-window-title "ub700"> Oasis </h1>
     <p class="ub400 map-info"> 32 Endell St, London WC2H 9AG, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -143,7 +143,7 @@ export const LidoList = [
     name: 'Park Road',
     lat: 51.5834,
     long: -0.12919,
-    infoWindow: `<h1 class="ub700"> Park Road </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Park Road </h1>
     <p class="ub400 map-info"> Park Rd, Crouch End, London N8 8JN, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -159,7 +159,7 @@ export const LidoList = [
     name: 'Parliament Hill',
     lat: 51.55966,
     long: -0.14039,
-    infoWindow: `<h1 class="ub700"> Parliament Hill </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Parliament Hill </h1>
     <p class="ub400 map-info"> Parliament Hill Fields, Gospel Oak, London NW5 1LT, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -176,7 +176,7 @@ export const LidoList = [
     name: 'Royal Docks',
     lat: 51.50987,
     long: 0.02405,
-    infoWindow: `<h1 class="ub700"> Royal Docks</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Royal Docks</h1>
     <p class="ub400 map-info"> Dock Rd, Royal Docks, London E16 1AH, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -192,7 +192,7 @@ export const LidoList = [
     name: 'Serpentine',
     lat: 51.50596,
     long: -0.16595,
-    infoWindow: `<h1 class="ub700"> Serpentine</h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Serpentine</h1>
     <p class="ub400 map-info"> Hyde Park, London, United Kingdom
     </p>
     <p class="ub400 map-info">
@@ -209,7 +209,7 @@ export const LidoList = [
     name: 'Tooting Bec',
     lat: 51.4307,
     long: -0.14093,
-    infoWindow: `<h1 class="ub700"> Tooting Bec </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Tooting Bec </h1>
     <p class="ub400 map-info"> Tooting Bec Rd, London SW16 1RU, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>
@@ -225,7 +225,7 @@ export const LidoList = [
     name: 'Uxbridge',
     lat: 51.5518,
     long: -0.46802,
-    infoWindow: `<h1 class="ub700"> Uxbridge </h1>
+    infoWindow: `<h1 class="info-window-title ub700"> Uxbridge </h1>
     <p class="ub400 map-info"> Gatting Way, Uxbridge UB8 1ES, United Kingdom
     </p>
     <p class="ub700"> Opening Hours:</p>

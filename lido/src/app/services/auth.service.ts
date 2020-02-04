@@ -3,8 +3,10 @@ import { auth } from 'firebase/app';
 import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { MatDialogRef } from '@angular/material';
 import { Router } from '@angular/router';
 
+import { LoginComponent } from '../components/login/login.component';
 import { User } from '../models/User';
 
 @Injectable({
@@ -36,10 +38,10 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then(result => {
         if (result.user.emailVerified) {
+          this.setUserData(result.user);
           this.ngZone.run(() => {
             this.router.navigate(['submit']);
           });
-          this.setUserData(result.user);
         } else {
           window.alert('You still need to verify your email address.');
         }
@@ -114,10 +116,9 @@ export class AuthService {
   }
 
   signOut() {
-    window.location.reload();
     return this.afAuth.auth.signOut().then(() => {
+      this.router.navigate(['']);
       localStorage.removeItem('user');
-      this.router.navigate(['home']);
     });
   }
 }

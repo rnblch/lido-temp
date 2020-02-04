@@ -1,9 +1,12 @@
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
+
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
+import { NavigationStart, Router, RouterEvent } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
-import { SidenavService } from '../../services/sidenav.service';
 import { ValidDomains } from './valid-lidos';
 
 @Component({
@@ -24,6 +27,7 @@ import { ValidDomains } from './valid-lidos';
   ]
 })
 export class SignupComponent implements OnInit {
+  routerSubscription: Subscription;
   email: string;
   displayName: string;
   password: string;
@@ -31,21 +35,26 @@ export class SignupComponent implements OnInit {
   validDomains = ValidDomains;
   constructor(
     public authService: AuthService,
-    public dialogRef: MatDialogRef<SignupComponent>,
-    private sidenav: SidenavService
+    private dialogRef: MatDialogRef<SignupComponent>,
+    private router: Router
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.routerSubscription = this.router.events
+      .pipe(
+        filter((event: RouterEvent) => event instanceof NavigationStart),
+        filter(() => !!this.dialogRef)
+      )
+      .subscribe(() => {
+        this.dialogRef.close();
+      });
+  }
 
   signup() {
-    this.authService.signUp(this.email, this.password, this.displayName);
-    this.dialogRef.close();
     if (this.verifyEmailDomainIsALido()) {
-      // TODO: sidenav close
       this.authService.signUp(this.email, this.password, this.displayName);
-      this.dialogRef.close();
     } else {
-      // this.isEmailInvalid = true;
+      this.isEmailInvalid = true;
     }
   }
 
