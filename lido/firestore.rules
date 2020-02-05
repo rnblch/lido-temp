@@ -6,7 +6,7 @@ service cloud.firestore {
       allow create: if request.auth.uid != null;
     }
      match /messages/{document=**} {
-      allow create;
+      allow create, write;
     }
      match /temperatures/{document=**} {
       allow read;

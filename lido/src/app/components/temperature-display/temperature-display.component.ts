@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Temperature } from '../../models/Temperature';
 import { TemperatureService } from '../../services/temperature.service';
 
 @Component({

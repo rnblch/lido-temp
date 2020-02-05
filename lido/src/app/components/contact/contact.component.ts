@@ -1,7 +1,8 @@
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { ContactService } from '../../services/contact.service';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-contact',
@@ -52,11 +53,11 @@ export class ContactComponent implements OnInit {
       if (res.id) {
         this.thanksLabel = true;
         this.errorLabel = false;
+        this.form.reset();
       } else {
         this.thanksLabel = false;
         this.errorLabel = true;
       }
     });
-    this.form.reset();
   }
 }
