@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { TemperatureService } from '../../services/temperature.service';
+import { LidoList } from '../lido-list';
 
 @Component({
   selector: 'app-temperature-display',
@@ -14,6 +15,7 @@ export class TemperatureDisplayComponent implements OnInit {
   sorryLabel: boolean;
   latestAreaTemperature: number;
   lastUpdated: Date;
+  lidos = LidoList;
   constructor(private temperatureService: TemperatureService) {}
 
   ngOnInit() {}

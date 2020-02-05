@@ -6,18 +6,7 @@ export interface Lido {
   long: Number;
   lastTemperature?: number;
   lastUpdated?: Date;
-  openingHours?: Hours;
   infoWindow?: string;
-}
-
-export interface Hours {
-  monday: OpenClose;
-  tuesday: OpenClose;
-  wednesday: OpenClose;
-  thursday: OpenClose;
-  friday: OpenClose;
-  saturday: OpenClose;
-  sunday: OpenClose;
 }
 
 export interface OpenClose {
