@@ -79,6 +79,11 @@
               >Log in</a
             >
           </li>
+          <li class="sidenav-item cambridge" *ngIf="authService.isLoggedIn">
+            <a (click)="goTo('submit')" class="nav-link cambridge ub500"
+              >Submit</a
+            >
+          </li>
           <li class="sidenav-item cambridge" *ngIf="!authService.isLoggedIn">
             <a
               (click)="openSignupDialog(); sidenav.close()"

@@ -1,19 +1,20 @@
-<form fxLayout="column">
+<form fxLayout="column" [formGroup]="lidoSearch">
   <mat-form-field>
     <input
       class="searchbar"
-      [formControl]="lidoName"
+      formControlName="lidoName"
       type="text"
       placeholder="Swimming venue name"
       aria-label="Swimming venue name"
       matInput
       [matAutocomplete]="auto"
+      required
     />
     <mat-autocomplete
       #autocomplete
       class="autocomplete"
       #auto="matAutocomplete"
-      (optionSelected)="getTemperature($event.option.value)"
+      (optionSelected)="onSelect($event.option.value)"
     >
       <mat-option
         class="aqua"

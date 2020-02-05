@@ -7,10 +7,12 @@
     <h2 class="ub500 cambridge">
       What's the temperature of your swimming venue today?
     </h2>
-    <app-lido-searchbar></app-lido-searchbar>
+    <app-lido-searchbar
+      #searchbar
+      (lidoNameEmitter)="setLidoName($event)"
+    ></app-lido-searchbar>
     <form
-      [formGroup]="form"
-      (ngSubmit)="onSubmit()"
+      [formGroup]="submitForm"
       fxLayoutAlign="center center"
       fxLayout="column"
     >
@@ -18,8 +20,17 @@
         <input
           type="number"
           matInput
-          placeholder="Temperature (°C)"
-          formControlName="temperature"
+          placeholder="Water temperature (°C)"
+          formControlName="waterTemperature"
+          (keydown.enter)="onSubmit()"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          type="number"
+          matInput
+          placeholder="Area temperature (°C)"
+          formControlName="areaTemperature"
           (keydown.enter)="onSubmit()"
         />
       </mat-form-field>
@@ -27,6 +38,8 @@
         mat-raised-button
         class="button background-cambridge midnight"
         type="submit"
+        (click)="onSubmit()"
+        [disabled]="submitForm.invalid"
       >
         Submit
       </button>

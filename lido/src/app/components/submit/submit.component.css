@@ -21,6 +21,10 @@ h2 {
   padding-bottom: 2rem;
 }
 
+label {
+  padding-top: 2rem;
+}
+
 .submit {
   padding-top: 2rem;
   padding-left: 1rem;

@@ -1,5 +1,4 @@
 export const ValidDomains = [
-  'gmail.com',
   'brockwelllido.com',
   'gll.org',
   'cityoflondon.gov.uk',

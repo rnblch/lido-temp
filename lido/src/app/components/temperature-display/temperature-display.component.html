@@ -1,7 +1,29 @@
-<div class="ub500" fxLayout="column" fxLayoutGap="2rem">
+<app-lido-searchbar
+  (lidoNameEmitter)="getLatestTemperature($event)"
+  fxLayoutAlign="center start"
+></app-lido-searchbar>
+<div
+  class="ub500"
+  fxLayout="column"
+  fxLayoutGap="2rem"
+  *ngIf="temperatureLabel"
+>
   <h2 class="midnight">
-    The water temperature at {{ selectedLido }} is {{ lastTemperature }} °C.
+    The water temperature at {{ selectedLido }} is
+    {{ latestWaterTemperature }} °C.
   </h2>
-  <h3 class="midnight">Last updated: {{ lastUpdated }}</h3>
+  <h2 class="midnight">
+    The area temperature at {{ selectedLido }} is
+    {{ latestAreaTemperature }} °C.
+  </h2>
+  <h3 class="midnight">
+    Last updated:
+    {{ lastUpdated.toDate() | date: 'medium' }}
+  </h3>
   <h3 class="midnight">Opening hours: {{ openingHours }}</h3>
+</div>
+<div class="ub500" *ngIf="sorryLabel">
+  <h2 class="midnight">
+    There is no temperature history yet for {{ selectedLido }}.
+  </h2>
 </div>
