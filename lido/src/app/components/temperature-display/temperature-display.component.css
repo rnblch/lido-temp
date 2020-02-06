@@ -12,5 +12,6 @@ h2 {
 }
 
 .section-text-wrapper {
-  width: 36vw;
+  width: 65vw;
+  text-align: center;
 }
