@@ -50,7 +50,7 @@ export class AuthService {
             {
               duration: 5000,
               verticalPosition: 'top',
-              horizontalPosition: 'left',
+              horizontalPosition: 'center',
               politeness: 'polite',
               panelClass: 'snackbar'
             }
@@ -61,7 +61,7 @@ export class AuthService {
         this.snackbar.open(`${error}`, 'Ok', {
           duration: 5000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         });
@@ -80,7 +80,7 @@ export class AuthService {
         this.snackbar.open(`${error}`, 'Ok', {
           duration: 5000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         });
@@ -103,7 +103,7 @@ export class AuthService {
           {
             duration: 5000,
             verticalPosition: 'top',
-            horizontalPosition: 'left',
+            horizontalPosition: 'center',
             politeness: 'polite',
             panelClass: 'snackbar'
           }
@@ -113,7 +113,7 @@ export class AuthService {
         this.snackbar.open(`${error}`, 'Ok', {
           duration: 5000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         });
@@ -138,7 +138,7 @@ export class AuthService {
         this.snackbar.open(`${error}`, 'Ok', {
           duration: 5000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         });

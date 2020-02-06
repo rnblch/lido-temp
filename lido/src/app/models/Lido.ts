@@ -8,8 +8,3 @@ export interface Lido {
   lastUpdated?: Date;
   infoWindow?: string;
 }
-
-export interface OpenClose {
-  open: string;
-  close: string;
-}

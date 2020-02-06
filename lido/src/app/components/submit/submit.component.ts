@@ -83,7 +83,7 @@ export class SubmitComponent implements OnInit {
             {
               duration: 5000,
               verticalPosition: 'top',
-              horizontalPosition: 'left',
+              horizontalPosition: 'center',
               politeness: 'polite',
               panelClass: 'snackbar'
             }
@@ -95,7 +95,7 @@ export class SubmitComponent implements OnInit {
             {
               duration: 5000,
               verticalPosition: 'top',
-              horizontalPosition: 'left',
+              horizontalPosition: 'center',
               politeness: 'polite',
               panelClass: 'snackbar'
             }

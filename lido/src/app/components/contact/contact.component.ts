@@ -61,7 +61,7 @@ export class ContactComponent implements OnInit {
         this.snackbar.open(`Thanks, we'll be in touch soon.`, 'Close', {
           duration: 5000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         });
@@ -74,7 +74,7 @@ export class ContactComponent implements OnInit {
           {
             duration: 5000,
             verticalPosition: 'top',
-            horizontalPosition: 'left',
+            horizontalPosition: 'center',
             politeness: 'polite',
             panelClass: 'snackbar'
           }

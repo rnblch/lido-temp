@@ -61,7 +61,7 @@ export class SignupComponent implements OnInit {
         {
           duration: 6000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         }

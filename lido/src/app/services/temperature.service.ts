@@ -38,7 +38,7 @@ export class TemperatureService {
       this.snackbar.open(`${error}`, 'Ok', {
         duration: 5000,
         verticalPosition: 'top',
-        horizontalPosition: 'left',
+        horizontalPosition: 'center',
         politeness: 'polite',
         panelClass: 'snackbar'
       });

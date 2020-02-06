@@ -28,7 +28,7 @@ export class AuthGuard implements CanActivate {
         {
           duration: 5000,
           verticalPosition: 'top',
-          horizontalPosition: 'left',
+          horizontalPosition: 'center',
           politeness: 'polite',
           panelClass: 'snackbar'
         }

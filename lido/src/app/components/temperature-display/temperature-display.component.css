@@ -1,3 +1,12 @@
 h2 {
   text-shadow: -1px 1px 2px rgba(5, 23, 81, 0.43);
+  text-align: center;
+}
+
+.opening-hours-label {
+  padding-top: 0.5rem;
+}
+
+.opening-hours-container {
+  margin-top: -1rem;
 }
