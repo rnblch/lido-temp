@@ -3,7 +3,7 @@ import { auth } from 'firebase/app';
 import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { MatDialogRef } from '@angular/material';
+import { MatDialogRef, MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 
 import { LoginComponent } from '../components/login/login.component';
@@ -19,7 +19,8 @@ export class AuthService {
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
     public router: Router,
-    public ngZone: NgZone
+    public ngZone: NgZone,
+    private snackbar: MatSnackBar
   ) {
     this.afAuth.authState.subscribe(user => {
       if (user) {
@@ -43,11 +44,27 @@ export class AuthService {
             this.router.navigate(['submit']);
           });
         } else {
-          window.alert('You still need to verify your email address.');
+          this.snackbar.open(
+            `You still need to verify your email address.`,
+            'Ok',
+            {
+              duration: 5000,
+              verticalPosition: 'top',
+              horizontalPosition: 'left',
+              politeness: 'polite',
+              panelClass: 'snackbar'
+            }
+          );
         }
       })
       .catch(error => {
-        window.alert(error.message);
+        this.snackbar.open(`${error}`, 'Ok', {
+          duration: 5000,
+          verticalPosition: 'top',
+          horizontalPosition: 'left',
+          politeness: 'polite',
+          panelClass: 'snackbar'
+        });
       });
   }
 
@@ -60,7 +77,13 @@ export class AuthService {
         this.setUserData(result.user);
       })
       .catch(error => {
-        window.alert(error.message);
+        this.snackbar.open(`${error}`, 'Ok', {
+          duration: 5000,
+          verticalPosition: 'top',
+          horizontalPosition: 'left',
+          politeness: 'polite',
+          panelClass: 'snackbar'
+        });
       });
   }
 
@@ -74,10 +97,26 @@ export class AuthService {
     return this.afAuth.auth
       .sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        this.snackbar.open(
+          `Password reset email sent. Please check your inbox.`,
+          'Ok',
+          {
+            duration: 5000,
+            verticalPosition: 'top',
+            horizontalPosition: 'left',
+            politeness: 'polite',
+            panelClass: 'snackbar'
+          }
+        );
       })
       .catch(error => {
-        window.alert(error);
+        this.snackbar.open(`${error}`, 'Ok', {
+          duration: 5000,
+          verticalPosition: 'top',
+          horizontalPosition: 'left',
+          politeness: 'polite',
+          panelClass: 'snackbar'
+        });
       });
   }
 
@@ -96,7 +135,13 @@ export class AuthService {
         this.setUserData(result.user);
       })
       .catch(error => {
-        window.alert(error);
+        this.snackbar.open(`${error}`, 'Ok', {
+          duration: 5000,
+          verticalPosition: 'top',
+          horizontalPosition: 'left',
+          politeness: 'polite',
+          panelClass: 'snackbar'
+        });
       });
   }
 

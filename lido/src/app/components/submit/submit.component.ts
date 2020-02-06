@@ -1,6 +1,7 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
 import { Temperature } from '../../models/Temperature';
 import { AuthService } from '../../services/auth.service';
@@ -28,8 +29,6 @@ import { LidoSearchbarComponent } from '../lido-searchbar/lido-searchbar.compone
 export class SubmitComponent implements OnInit {
   @ViewChild('searchbar', { static: false }) searchbar: LidoSearchbarComponent;
   submitForm: FormGroup;
-  thanksLabel: boolean;
-  errorLabel: boolean;
   filteredOptions: any;
   lidos = LidoList;
   lidoName: any;
@@ -37,7 +36,8 @@ export class SubmitComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     public authService: AuthService,
-    private temperatureService: TemperatureService
+    private temperatureService: TemperatureService,
+    private snackbar: MatSnackBar
   ) {
     this.createForm();
   }
@@ -77,9 +77,29 @@ export class SubmitComponent implements OnInit {
         if (doc.id) {
           this.submitForm.reset();
           this.searchbar.lidoSearch.reset();
-          this.thanksLabel = true;
+          this.snackbar.open(
+            `Thanks for taking the time to help out today!`,
+            'Ok',
+            {
+              duration: 5000,
+              verticalPosition: 'top',
+              horizontalPosition: 'left',
+              politeness: 'polite',
+              panelClass: 'snackbar'
+            }
+          );
         } else {
-          this.errorLabel = true;
+          this.snackbar.open(
+            `Oops. Something went wrong. Please try again later.`,
+            'Ok',
+            {
+              duration: 5000,
+              verticalPosition: 'top',
+              horizontalPosition: 'left',
+              politeness: 'polite',
+              panelClass: 'snackbar'
+            }
+          );
         }
       });
   }

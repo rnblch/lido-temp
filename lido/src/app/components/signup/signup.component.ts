@@ -3,7 +3,7 @@ import { filter } from 'rxjs/operators';
 
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material';
+import { MatDialogRef, MatSnackBar } from '@angular/material';
 import { NavigationStart, Router, RouterEvent } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
@@ -36,7 +36,8 @@ export class SignupComponent implements OnInit {
   constructor(
     public authService: AuthService,
     private dialogRef: MatDialogRef<SignupComponent>,
-    private router: Router
+    private router: Router,
+    private snackbar: MatSnackBar
   ) {}
 
   ngOnInit() {
@@ -54,7 +55,17 @@ export class SignupComponent implements OnInit {
     if (this.verifyEmailDomainIsALido()) {
       this.authService.signUp(this.email, this.password, this.displayName);
     } else {
-      this.isEmailInvalid = true;
+      this.snackbar.open(
+        `Uh oh. Your email tells us you may not work for a London swimming venue. Try again with your work email?`,
+        'Ok',
+        {
+          duration: 6000,
+          verticalPosition: 'top',
+          horizontalPosition: 'left',
+          politeness: 'polite',
+          panelClass: 'snackbar'
+        }
+      );
     }
   }
 

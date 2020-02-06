@@ -210,3 +210,15 @@ h2 {
 .dialog-container .mat-dialog-container {
   margin: 2rem;
 }
+
+.snackbar {
+  background-color: #142733;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+}
+
+.snackbar button {
+  color: #ffbf26;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}

@@ -4,6 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, DocumentData, QuerySnapshot } from '@angular/fire/firestore';
+import { MatSnackBar } from '@angular/material';
 
 import { Temperature } from '../models/Temperature';
 
@@ -11,7 +12,11 @@ import { Temperature } from '../models/Temperature';
   providedIn: 'root'
 })
 export class TemperatureService {
-  constructor(private http: HttpClient, private db: AngularFirestore) {}
+  constructor(
+    private http: HttpClient,
+    private db: AngularFirestore,
+    private snackbar: MatSnackBar
+  ) {}
 
   getTemperatureByLidoName(lidoName: string): Observable<Temperature[]> {
     const temperatureCollection = this.db.collection('/temperatures', ref =>
@@ -30,7 +35,13 @@ export class TemperatureService {
     try {
       return this.db.collection('temperatures').add(temperature);
     } catch (error) {
-      window.alert('Something went wrong. Please try again later.');
+      this.snackbar.open(`${error}`, 'Ok', {
+        duration: 5000,
+        verticalPosition: 'top',
+        horizontalPosition: 'left',
+        politeness: 'polite',
+        panelClass: 'snackbar'
+      });
     }
   }
 }
