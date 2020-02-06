@@ -3,37 +3,37 @@
   fxLayoutAlign="center start"
 ></app-lido-searchbar>
 <div
-  class="ub500"
+  class="ms700 section-text-shadow"
   fxLayout="column"
   fxLayoutGap="2rem"
   *ngIf="temperatureLabel"
   fxLayoutAlign="center center"
 >
-  <h2 class="midnight">
+  <h2 class="white section-text-wrapper">
     The water temperature at {{ selectedLido }} is
     {{ latestWaterTemperature }} °C.
   </h2>
-  <h2 class="midnight">
+  <h2 class="white section-text-wrapper">
     The area temperature at {{ selectedLido }} is
     {{ latestAreaTemperature }} °C.
   </h2>
 
-  <h3 class="midnight">
+  <h3 class="white ms700">
     Last updated:
     {{ lastUpdated.toDate() | date: 'hh:mm a dd/MM/yyyy' }}
   </h3>
-  <h3 class="opening-hours-label midnight">
+  <h3 class="opening-hours-label ms700 white">
     Opening Hours:
   </h3>
   <div
     [innerHtml]="openingHours"
     fxLayoutAlign="center center"
     fxLayout="column"
-    class="opening-hours-container midnight ub500"
+    class="opening-hours-container white ms500 section-text-shadow"
   ></div>
 </div>
-<div class="ub500" *ngIf="sorryLabel">
-  <h2 class="midnight">
+<div class="ms700" *ngIf="sorryLabel">
+  <h2 class="white section-text-shadow">
     There is no temperature history yet for {{ selectedLido }}.
   </h2>
 </div>

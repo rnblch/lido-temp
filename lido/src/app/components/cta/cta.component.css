@@ -1,30 +1,30 @@
-h1 {
-  padding-top: 0;
-  padding-bottom: 3rem;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .cta {
-  padding: 3rem;
-  padding-top: 8rem;
+  background-image: url('../../../assets/poolside.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+  box-shadow: -1px 1px 2px rgba(63, 66, 73, 0.43);
+  text-align: center;
 }
 
-input {
-  color: #124559;
-}
-
-input:focus {
-  color: #142733;
+:host ::ng-deep app-lido-searchbar input {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 :host ::ng-deep app-lido-searchbar .mat-focused .mat-form-field-label {
-  color: #124559 !important;
+  color: white !important;
 }
 
 :host ::ng-deep app-lido-searchbar .mat-form-field-label {
-  color: #124559 !important;
-  font-family: 'Ubuntu', sans-serif !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 1rem;
 }
 
 :host
@@ -32,33 +32,33 @@ input:focus {
   app-lido-searchbar
   .mat-form-field-underline
   .mat-form-field-ripple {
-  background-color: #124559 !important;
+  background-color: white !important;
 }
 
 :host ::ng-deep app-lido-searchbar .mat-form-field-underline {
-  background-color: #124559 !important;
+  background-color: white !important;
 }
 
 :host ::ng-deep app-lido-searchbar .mat-option-text {
-  color: #142733 !important;
-  font-family: 'Ubuntu', sans-serif !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 500;
 }
 
 :host ::ng-deep app-lido-searchbar input::-webkit-input-placeholder {
-  color: #124559 !important;
+  color: white !important;
 }
 
 :host ::ng-deep app-lido-searchbar input:-moz-placeholder {
-  color: #124559 !important;
+  color: white !important;
 }
 
 :host ::ng-deep app-lido-searchbar input::-moz-placeholder {
-  color: #124559 !important;
+  color: white !important;
 }
 
 :host ::ng-deep app-lido-searchbar input:-ms-input-placeholder {
-  color: #124559 !important;
+  color: white !important;
 }
 
 :host
@@ -66,14 +66,10 @@ input:focus {
   app-lido-searchbar
   .mat-form-field-appearance-outline
   .mat-form-field-outline-thick {
-  color: #142733 !important;
+  color: white !important;
 }
 
 @media (max-width: 62em) {
-  .cta-hero {
-    width: 100vw !important;
-  }
-
   h1 {
     font-size: 1.625rem;
   }

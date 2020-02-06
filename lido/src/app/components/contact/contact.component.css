@@ -1,9 +1,9 @@
 input {
-  color: #124559;
+  color: #474747;
 }
 
 #contact {
-  padding: 3rem;
+  padding: 8rem;
 }
 
 #form {
@@ -11,20 +11,20 @@ input {
 }
 
 :host ::ng-deep .mat-focused .mat-form-field-label {
-  color: #124559 !important;
+  color: #474747 !important;
 }
 
 :host ::ng-deep .mat-form-field-label {
-  color: #124559 !important;
-  font-family: 'Ubuntu', sans-serif !important;
+  color: #474747 !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 :host ::ng-deep .mat-form-field-underline .mat-form-field-ripple {
-  background-color: #124559 !important;
+  background-color: #474747 !important;
 }
 
 :host ::ng-deep .mat-form-field-underline {
-  background-color: #124559 !important;
+  background-color: #474747 !important;
 }
 
 :host ::ng-deep .mat-form-field {
@@ -35,15 +35,19 @@ input {
   ::ng-deep
   .mat-form-field-appearance-outline
   .mat-form-field-outline-thick {
-  color: #124559;
+  color: #474747;
 }
 
 :host ::ng-deep .mat-form-field {
-  color: #124559;
+  color: #474747;
 }
 
 @media (max-width: 62em) {
   h1 {
     font-size: 1.625rem;
+  }
+
+  #contact {
+    padding: 4rem;
   }
 }

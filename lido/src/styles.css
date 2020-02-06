@@ -20,7 +20,6 @@ body {
 
 body {
   display: block;
-  background-color: #a3c7bd;
 }
 
 .cdk-global-scrollblock {
@@ -77,18 +76,18 @@ h2 {
   font-size: 1.5rem;
 }
 
-.ub400 {
-  font-family: 'Ubuntu', sans-serif;
+.ms400 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
-.ub500 {
-  font-family: 'Ubuntu', sans-serif;
+.ms500 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
 
-.ub700 {
-  font-family: 'Ubuntu', sans-serif;
+.ms700 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
@@ -114,28 +113,28 @@ h2 {
   background-color: #ffbf26;
 }
 
-.cambridge {
-  color: #a3c7bd;
-}
-
-.background-cambridge {
-  background-color: #a3c7bd;
-}
-
 .aqua {
-  color: #124559;
+  color: #4dbad6;
 }
 
 .background-aqua {
-  background-color: #124559;
+  background-color: #4dbad6;
 }
 
-.midnight {
-  color: #142733;
+.gray {
+  color: #bcbcbc;
 }
 
-.background-midnight {
-  background-color: #142733;
+.background-gray {
+  background-color: #bcbcbc;
+}
+
+.space {
+  color: #474747;
+}
+
+.background-space {
+  background-color: #474747;
 }
 
 .white {
@@ -162,8 +161,13 @@ h2 {
   max-height: 220px !important;
 }
 
+.section {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .section-text {
-  font-size: 1.75rem;
+  font-size: 1.2rem;
 }
 
 .section-text-shadow {
@@ -212,13 +216,13 @@ h2 {
 }
 
 .snackbar {
-  background-color: #124559;
-  font-family: 'Ubuntu', sans-serif;
+  background-color: #474747;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 .snackbar button {
   color: #ffbf26;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }

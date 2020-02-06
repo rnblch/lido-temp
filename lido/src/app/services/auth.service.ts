@@ -1,4 +1,5 @@
 import { auth } from 'firebase/app';
+import { Observable, of } from 'rxjs';
 
 import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -32,6 +33,14 @@ export class AuthService {
         JSON.parse(localStorage.getItem('user'));
       }
     });
+  }
+
+  setUser(user) {
+    this.userData = user;
+  }
+
+  getAuthenticated(): Observable<any> {
+    return of(this.afAuth.auth);
   }
 
   signIn(email, password) {

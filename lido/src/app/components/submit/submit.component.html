@@ -1,10 +1,10 @@
-<section class="section background-midnight">
-  <h1 class="ub700 cambridge section-text-shadow" fxLayoutAlign="start">
+<section class="section background-space">
+  <h1 class="ms700 white section-text-shadow" fxLayoutAlign="start">
     Hi,
     {{ authService.userData ? authService.userData.displayName : 'User' }}!
   </h1>
   <div class="submit" fxLayoutAlign="center center" fxLayout="column">
-    <h2 class="ub500 cambridge">
+    <h2 class="ms500 white section-text-shadow">
       What's the temperature of your swimming venue today?
     </h2>
     <app-lido-searchbar
@@ -36,7 +36,7 @@
       </mat-form-field>
       <button
         mat-raised-button
-        class="button background-cambridge midnight"
+        class="button background-white space"
         type="submit"
         (click)="onSubmit()"
         [disabled]="submitForm.invalid"

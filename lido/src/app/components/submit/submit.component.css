@@ -9,12 +9,13 @@ input[type='number'] {
 }
 
 .section {
-  height: 100vh;
   padding: 3rem;
+  height: 100vh;
 }
 
 h1 {
   padding-left: 1rem;
+  padding-top: 3rem;
 }
 
 h2 {
@@ -31,11 +32,11 @@ label {
 }
 
 app-lido-searchbar {
-  color: #a3c7bd !important;
+  color: white !important;
 }
 
 input {
-  color: #a3c7bd;
+  color: white;
 }
 
 :host ::ng-deep .mat-focused .mat-form-field-label {
@@ -44,44 +45,44 @@ input {
 
 :host ::ng-deep .mat-form-field-label {
   color: #ffbf26 !important;
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 :host ::ng-deep .mat-form-field-underline .mat-form-field-ripple {
-  background-color: #a3c7bd !important;
+  background-color: white !important;
 }
 
 :host ::ng-deep .mat-form-field-underline {
-  background-color: #a3c7bd !important;
+  background-color: white !important;
 }
 
 :host ::ng-deep .mat-option-text {
-  color: #a3c7bd !important;
-  font-family: 'Ubuntu', sans-serif !important;
+  color: white !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-weight: 500;
 }
 
 :host ::ng-deep input::-webkit-input-placeholder {
-  color: #a3c7bd !important;
+  color: white !important;
 }
 
 :host ::ng-deep input:-moz-placeholder {
-  color: #a3c7bd !important;
+  color: white !important;
 }
 
 :host ::ng-deep input::-moz-placeholder {
-  color: #a3c7bd !important;
+  color: white !important;
 }
 
 :host ::ng-deep input:-ms-input-placeholder {
-  color: #a3c7bd !important;
+  color: white !important;
 }
 
 :host
   ::ng-deep
   .mat-form-field-appearance-outline
   .mat-form-field-outline-thick {
-  color: #a3c7bd !important;
+  color: white !important;
 }
 
 :host ::ng-deep .mat-form-field,

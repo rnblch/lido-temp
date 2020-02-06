@@ -13,7 +13,7 @@
           fxHide.gt-sm
           aria-label="Side nav toggle icon"
         >
-          <mat-icon class="icon cambridge">menu</mat-icon>
+          <mat-icon class="icon gray">menu</mat-icon>
         </button>
         <a class="home-button" href="/"
           ><img width="46" height="46" src="../../assets/lido-favicon.svg" />
@@ -22,38 +22,32 @@
       <div fxShow="true" fxHide.lt-md>
         <ul title="Main Menu" class="nav-list">
           <li class="nav-item">
-            <a (click)="goTo('about')" class="nav-link cambridge ub500"
-              >About</a
-            >
+            <a (click)="goTo('about')" class="nav-link gray ms500">About</a>
           </li>
           <li class="nav-item">
-            <a (click)="goTo('contact')" class="nav-link cambridge ub500"
-              >Contact</a
-            >
+            <a (click)="goTo('contact')" class="nav-link gray ms500">Contact</a>
           </li>
           <li class="nav-item" *ngIf="!authService.isLoggedIn">
             <a
               (click)="openLoginDialog(); sidenav.close()"
-              class="nav-link cambridge ub500"
+              class="nav-link gray ms500"
               >Log in</a
             >
           </li>
           <li class="nav-item" *ngIf="authService.isLoggedIn">
-            <a (click)="goTo('submit')" class="nav-link cambridge ub500"
-              >Submit</a
-            >
+            <a (click)="goTo('submit')" class="nav-link gray ms500">Submit</a>
           </li>
           <li class="nav-item" *ngIf="!authService.isLoggedIn">
             <a
               (click)="openSignupDialog(); sidenav.close()"
-              class="nav-link cambridge ub500"
+              class="nav-link gray ms500"
               >Signup</a
             >
           </li>
           <li class="nav-item" *ngIf="authService.isLoggedIn">
             <a
               (click)="authService.signOut(); sidenav.close()"
-              class="nav-link cambridge ub500"
+              class="nav-link gray ms500"
               >Sign Out</a
             >
           </li>
@@ -63,38 +57,36 @@
   </div>
 
   <mat-sidenav-container fxFlexFill>
-    <mat-sidenav class="sidenav background-midnight" position="start" #sidenav>
+    <mat-sidenav class="sidenav background-white" position="start" #sidenav>
       <mat-nav-list fxLayout="column">
         <ul title="Main Menu">
-          <li class="sidenav-item cambridge">
-            <a (click)="goTo('about')" class="nav-link ub500">About</a>
+          <li class="sidenav-item gray">
+            <a (click)="goTo('about')" class="nav-link ms500">About</a>
           </li>
-          <li class="sidenav-item cambridge">
-            <a (click)="goTo('contact')" class="nav-link ub500">Contact</a>
+          <li class="sidenav-item gray">
+            <a (click)="goTo('contact')" class="nav-link ms500">Contact</a>
           </li>
-          <li class="sidenav-item cambridge" *ngIf="!authService.isLoggedIn">
+          <li class="sidenav-item gray" *ngIf="!authService.isLoggedIn">
             <a
               (click)="openLoginDialog(); sidenav.close()"
-              class="nav-link ub500"
+              class="nav-link ms500"
               >Log in</a
             >
           </li>
-          <li class="sidenav-item cambridge" *ngIf="authService.isLoggedIn">
-            <a (click)="goTo('submit')" class="nav-link cambridge ub500"
-              >Submit</a
-            >
+          <li class="sidenav-item gray" *ngIf="authService.isLoggedIn">
+            <a (click)="goTo('submit')" class="nav-link gray ms500">Submit</a>
           </li>
-          <li class="sidenav-item cambridge" *ngIf="!authService.isLoggedIn">
+          <li class="sidenav-item gray" *ngIf="!authService.isLoggedIn">
             <a
               (click)="openSignupDialog(); sidenav.close()"
-              class="nav-link ub500"
+              class="nav-link ms500"
               >Signup</a
             >
           </li>
           <li class="sidenav-item nah" *ngIf="authService.isLoggedIn">
             <a
               (click)="authService.signOut(); sidenav.close()"
-              class="nav-link ub500"
+              class="nav-link ms500"
               >Log out</a
             >
           </li>

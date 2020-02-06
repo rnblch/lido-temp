@@ -56,7 +56,7 @@ export class TemperatureDisplayComponent implements OnInit {
     });
 
     const lidoRegexArray = lidoMapper[0].infoWindow.match(
-      /<p class="ub400">.*/g
+      /<p class="ms500">.*/g
     );
 
     return lidoRegexArray.join('\n');

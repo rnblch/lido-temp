@@ -4,7 +4,11 @@
 }
 
 #about {
-  padding: 3rem;
+  padding: 6rem;
+}
+
+.center-text {
+  font-size: 2rem;
 }
 
 .section-text {
@@ -35,5 +39,9 @@
 
   .center-text {
     font-size: 1.625rem;
+  }
+
+  h1 {
+    padding-top: 4rem;
   }
 }
