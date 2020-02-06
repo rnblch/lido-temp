@@ -9,20 +9,20 @@
   *ngIf="temperatureLabel"
   fxLayoutAlign="center center"
 >
-  <h2 class="midnight" [@inOut]>
+  <h2 class="midnight">
     The water temperature at {{ selectedLido }} is
     {{ latestWaterTemperature }} °C.
   </h2>
-  <h2 class="midnight" [@inOut]>
+  <h2 class="midnight">
     The area temperature at {{ selectedLido }} is
     {{ latestAreaTemperature }} °C.
   </h2>
 
-  <h3 class="midnight" [@inOut]>
+  <h3 class="midnight">
     Last updated:
     {{ lastUpdated.toDate() | date: 'hh:mm a dd/MM/yyyy' }}
   </h3>
-  <h3 class="opening-hours-label midnight" [@inOut]>
+  <h3 class="opening-hours-label midnight">
     Opening Hours:
   </h3>
   <div
@@ -30,10 +30,9 @@
     fxLayoutAlign="center center"
     fxLayout="column"
     class="opening-hours-container midnight ub500"
-    [@inOut]
   ></div>
 </div>
-<div class="ub500" *ngIf="sorryLabel" [@inOut]="enter">
+<div class="ub500" *ngIf="sorryLabel">
   <h2 class="midnight">
     There is no temperature history yet for {{ selectedLido }}.
   </h2>
