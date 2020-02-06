@@ -4,7 +4,7 @@ h3 {
 }
 
 input {
-  color: #474747;
+  color: #474747 !important;
   font-family: 'Montserrat', sans-serif;
 }
 

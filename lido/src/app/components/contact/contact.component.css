@@ -6,6 +6,11 @@ input {
   padding: 8rem;
 }
 
+.section {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
 #form {
   padding-bottom: 1rem;
 }
@@ -40,6 +45,16 @@ input {
 
 :host ::ng-deep .mat-form-field {
   color: #474747;
+}
+
+:host ::ng-deep .mat-form-field {
+  width: 60vw !important;
+}
+
+@media (min-width: 48em) {
+  :host ::ng-deep .mat-form-field {
+    width: 35vw !important;
+  }
 }
 
 @media (max-width: 62em) {

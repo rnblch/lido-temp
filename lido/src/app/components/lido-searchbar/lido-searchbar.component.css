@@ -1,5 +1,5 @@
 :host ::ng-deep .mat-form-field {
-  width: 70vw !important;
+  width: 60vw !important;
 }
 
 @media (min-width: 48em) {
