@@ -1,5 +1,6 @@
 export const ValidDomains = [
   'cherrywang1985@gmail.com',
+  'lewisham.gov.uk',
   'brockwelllido.com',
   'gll.org',
   'cityoflondon.gov.uk',

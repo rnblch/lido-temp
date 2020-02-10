@@ -75,17 +75,31 @@ h1 {
   color: white !important;
 }
 
+@media (min-width: 62em) {
+  .cta {
+    padding: 16rem;
+    padding-bottom: 2rem;
+    padding-top: 13rem;
+  }
+}
+
 @media (min-width: 48em) {
   h1 {
     font-size: 1.8rem;
   }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 1024px) and (max-width: 1024px) {
   .cta {
-    padding: 16rem;
-    padding-bottom: 2rem;
-    padding-top: 13rem;
+    padding: 10rem;
+    padding-top: 32rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 768px) {
+  .cta {
+    padding: 8rem;
+    padding-top: 20rem;
   }
 }
 
