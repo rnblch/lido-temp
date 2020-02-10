@@ -38,6 +38,7 @@ import {
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AuthService } from './services/auth.service';
     SubmitComponent,
     TemperatureDisplayComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
