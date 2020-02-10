@@ -1,39 +1,51 @@
-<app-lido-searchbar
-  (lidoNameEmitter)="getLatestTemperature($event)"
-  fxLayoutAlign="center start"
-></app-lido-searchbar>
-<div
-  class="ms700 section-text-shadow"
-  fxLayout="column"
-  fxLayoutGap="2rem"
-  *ngIf="temperatureLabel"
-  fxLayoutAlign="center center"
->
-  <h2 class="white section-text-wrapper">
-    The water temperature at {{ selectedLido }} is
-    {{ latestWaterTemperature }} °C.
-  </h2>
-  <h2 class="white section-text-wrapper">
-    The area temperature at {{ selectedLido }} is
-    {{ latestAreaTemperature }} °C.
-  </h2>
-
-  <h3 class="white ms700 section-text-wrapper">
-    Last updated:
-    {{ lastUpdated.toDate() | date: 'hh:mm a dd/MM/yyyy' }}
-  </h3>
-  <h3 class="opening-hours-label ms700 white section-text-wrapper">
-    Opening Hours:
-  </h3>
+<section fxLayout="column">
+  <app-lido-searchbar
+    (lidoNameEmitter)="getLatestTemperature($event)"
+    fxLayoutAlign="start"
+  ></app-lido-searchbar>
   <div
-    [innerHtml]="openingHours"
-    fxLayoutAlign="center center"
+    class="ms700 section-text-shadow"
     fxLayout="column"
-    class="opening-hours-container white ms700 section-text-shadow"
-  ></div>
-</div>
-<div class="ms700" *ngIf="sorryLabel">
-  <h2 class="white section-text-shadow">
-    There is no temperature history yet for {{ selectedLido }}.
-  </h2>
-</div>
+    fxLayoutGap="2rem"
+    *ngIf="temperatureLabel"
+    fxLayoutAlign="start"
+  >
+    <h2 class="white section-text-wrapper">
+      The water temperature at {{ selectedLido }} is
+      {{ latestWaterTemperature }} °C.
+    </h2>
+    <h2 class="white section-text-wrapper">
+      The area temperature at {{ selectedLido }} is
+      {{ latestAreaTemperature }} °C.
+    </h2>
+
+    <h3
+      class="white ms700 section-text-wrapper"
+      fxLayoutAlign="center"
+      fxLayoutAlign.sm="start"
+      fxLayoutAlign.xs="start"
+    >
+      Last updated:
+      <span class="ms500">
+        &nbsp;{{ lastUpdated.toDate() | date: 'hh:mm a dd/MM/yyyy' }}
+      </span>
+    </h3>
+    <h3
+      class="opening-hours-label ms700 white section-text-wrapper"
+      fxLayoutAlign="center"
+    >
+      Opening hours:
+    </h3>
+    <div
+      [innerHtml]="openingHours"
+      fxLayoutAlign="center center"
+      fxLayout="column"
+      class="opening-hours-container white ms700 section-text-shadow"
+    ></div>
+  </div>
+  <div class="ms700" *ngIf="sorryLabel">
+    <h2 class="white section-text-shadow">
+      There is no temperature history yet for {{ selectedLido }}.
+    </h2>
+  </div>
+</section>

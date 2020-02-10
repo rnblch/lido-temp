@@ -1,6 +1,6 @@
 h2 {
-  text-align: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  max-width: 61vw;
 }
 
 .opening-hours-label {
@@ -11,7 +11,9 @@ h2 {
   margin-top: -1rem;
 }
 
-.section-text-wrapper {
-  width: 65vw;
-  text-align: center;
+@media (min-width: 48em) {
+  h2 {
+    font-size: 1.25rem;
+    max-width: 31vw;
+  }
 }

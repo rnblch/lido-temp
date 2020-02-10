@@ -7,7 +7,7 @@ import { MatDialogRef, MatSnackBar } from '@angular/material';
 import { NavigationStart, Router, RouterEvent } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
-import { ValidDomains } from './valid-lidos';
+import { ValidDomains } from './valid-domains';
 
 @Component({
   selector: 'app-signup',
@@ -71,6 +71,9 @@ export class SignupComponent implements OnInit {
 
   verifyEmailDomainIsALido(): boolean {
     const domain = this.email.match(/@(.*)/g)[0].substring(1);
-    return this.validDomains.includes(domain);
+    return (
+      this.validDomains.includes(domain) ||
+      this.validDomains.includes(this.email)
+    );
   }
 }

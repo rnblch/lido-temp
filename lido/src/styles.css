@@ -37,7 +37,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
-  -webkit-text-fill-color: #2f3764;
+  -webkit-text-fill-color: #474747;
   -webkit-box-shadow: none;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -69,7 +69,7 @@ textarea {
 
 h1 {
   padding: 2rem;
-  font-size: 2.525rem;
+  font-size: 1.75rem;
 }
 
 h2 {
@@ -217,8 +217,11 @@ h2 {
 
 .snackbar {
   background-color: #474747;
-  font-family: 'Montserrat', sans-serif !important;
   font-weight: 400;
+}
+
+.mat-simple-snackbar {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .snackbar button {

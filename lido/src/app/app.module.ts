@@ -38,7 +38,6 @@ import {
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
-import { SidenavService } from './services/sidenav.service';
 
 @NgModule({
   declarations: [
@@ -82,7 +81,6 @@ import { SidenavService } from './services/sidenav.service';
   providers: [
     AuthService,
     AuthGuard,
-    SidenavService,
     { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } },
     {
       provide: MatDialogRef,

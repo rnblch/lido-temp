@@ -1,16 +1,8 @@
-<section class="landing">
-  <span
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayout.sm="column"
-    fxLayout.m="column"
-    fxLayoutGap="4em"
-  >
-    <div class="cta" fxLayout="column" fxLayoutAlign="center center">
-      <h1 class="white section-text-shadow ms700">
-        Find the water temperature of your London swimming venue today
-      </h1>
-      <app-temperature-display class="cta-searchbar"></app-temperature-display>
-    </div>
-  </span>
+<section class="landing" fxLayout="column">
+  <div class="cta">
+    <h1 class="white section-text-shadow ms700" fxLayoutAlign="start">
+      Find the water temperature of your London swimming venue today
+    </h1>
+    <app-temperature-display fxLayoutAlign="start"></app-temperature-display>
+  </div>
 </section>

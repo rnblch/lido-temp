@@ -1,13 +1,11 @@
-import { auth } from 'firebase/app';
 import { Observable, of } from 'rxjs';
 
 import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-import { MatDialogRef, MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
 
-import { LoginComponent } from '../components/login/login.component';
 import { User } from '../models/User';
 
 @Injectable({

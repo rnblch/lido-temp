@@ -9,13 +9,6 @@
 
 .navbar-desktop {
   background-color: white;
-  display: flex;
-}
-
-.icon {
-  font-size: 2rem;
-  margin-left: -0.75rem;
-  margin-top: -0.25em;
 }
 
 .icon:active {
@@ -63,8 +56,46 @@ a {
   position: static;
 }
 
-@media (min-device-width: 768px) and (max-device-width: 768px) {
+.mat-icon-button {
+  margin-left: -0.5rem;
+}
+
+.home-button {
+  margin-left: -2rem;
+}
+
+@media (min-width: 951px) and (max-width: 999px) {
   .home-button {
-    margin-left: 10vw;
+    margin-left: 19rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 950px) {
+  .home-button {
+    margin-left: 13rem;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 767px) {
+  .home-button {
+    margin-left: 2.6rem;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 410px) {
+  .home-button {
+    margin-left: 1.6rem;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 374px) {
+  .home-button {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .home-button {
+    margin-left: 0.05rem;
   }
 }
