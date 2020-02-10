@@ -14,7 +14,7 @@
       The water temperature at {{ selectedLido }} is
       {{ latestWaterTemperature }} °C.
     </h2>
-    <h2 class="white section-text-wrapper">
+    <h2 class="white section-text-wrapper" *ngIf="latestAreaTemperature">
       The area temperature at {{ selectedLido }} is
       {{ latestAreaTemperature }} °C.
     </h2>

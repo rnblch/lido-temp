@@ -50,12 +50,9 @@ export class SubmitComponent implements OnInit {
     this.submitForm = this.formBuilder.group({
       waterTemperature: [
         '',
-        [Validators.required, Validators.min(-20), Validators.max(100)]
+        [Validators.required, Validators.min(-10), Validators.max(50)]
       ],
-      areaTemperature: [
-        '',
-        [Validators.required, Validators.min(-20), Validators.max(100)]
-      ]
+      areaTemperature: ['', [Validators.min(-10), Validators.max(50)]]
     });
   }
 

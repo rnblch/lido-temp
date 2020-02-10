@@ -13,6 +13,11 @@ input[type='number'] {
   height: 100vh;
 }
 
+.legend {
+  padding: 2rem;
+  text-align: center;
+}
+
 h1 {
   padding-left: 1rem;
   padding-top: 3rem;
@@ -90,9 +95,17 @@ input {
   width: 70vw !important;
 }
 
+:host ::ng-deep app-lido-searchbar .mat-form-field {
+  width: 70vw !important;
+}
+
 @media (min-width: 48em) {
   :host ::ng-deep .mat-form-field,
   .button {
+    width: 50vw !important;
+  }
+
+  :host ::ng-deep app-lido-searchbar .mat-form-field {
     width: 50vw !important;
   }
 }

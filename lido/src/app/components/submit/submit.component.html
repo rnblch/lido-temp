@@ -23,6 +23,7 @@
           placeholder="Water temperature (°C)"
           formControlName="waterTemperature"
           (keydown.enter)="onSubmit()"
+          required
         />
       </mat-form-field>
       <mat-form-field>
@@ -44,5 +45,14 @@
         Submit
       </button>
     </form>
+    <div class="legend">
+      <p class="ms500 white section-text-shadow">
+        * denotes a required field.
+      </p>
+      <p class="ms500 white section-text-shadow">
+        Please only enter numbers between -10°C and 50°C.
+      </p>
+      <p class="ms500 white section-text-shadow"></p>
+    </div>
   </div>
 </section>
