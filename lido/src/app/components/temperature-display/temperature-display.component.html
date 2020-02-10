@@ -19,12 +19,7 @@
       {{ latestAreaTemperature }} °C.
     </h2>
 
-    <h3
-      class="white ms700 section-text-wrapper"
-      fxLayoutAlign="center"
-      fxLayoutAlign.sm="start"
-      fxLayoutAlign.xs="start"
-    >
+    <h3 class="white ms700 section-text-wrapper" fxLayoutAlign="start">
       Last updated:
       <span class="ms500">
         &nbsp;{{ lastUpdated.toDate() | date: 'hh:mm a dd/MM/yyyy' }}
@@ -32,13 +27,13 @@
     </h3>
     <h3
       class="opening-hours-label ms700 white section-text-wrapper"
-      fxLayoutAlign="center"
+      fxLayoutAlign="start"
     >
       Opening hours:
     </h3>
     <div
       [innerHtml]="openingHours"
-      fxLayoutAlign="center center"
+      fxLayoutAlign="start"
       fxLayout="column"
       class="opening-hours-container white ms700 section-text-shadow"
     ></div>
