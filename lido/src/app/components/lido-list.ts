@@ -236,5 +236,21 @@ export const LidoList = [
     <p class="ms500">Friday	6AM–10PM</p>
     <p class="ms500">Saturday	8AM–8PM</p>
     <p class="ms500">Sunday	8AM–8PM</p>`
+  },
+  {
+    name: 'New Lido',
+    lat: 51.5518,
+    long: -0.46802,
+    infoWindow: `<h1 class="info-window-title ms700"> Uxbridge </h1>
+    <p class="ms500 map-info"> Gatting Way, Uxbridge UB8 1ES, United Kingdom
+    </p>
+    <p class="ms700"> Opening Hours:</p>
+    <p class="ms500">Monday	6AM–7:30PM</p>
+    <p class="ms500">Tuesday  6AM–12AM</p>
+    <p class="ms500">Wednesday	6AM–10PM</p>
+    <p class="ms500">Thursday	6AM–10PM</p>
+    <p class="ms500">Friday	6AM–10PM</p>
+    <p class="ms500">Saturday	8AM–8PM</p>
+    <p class="ms500">Sunday	8AM–8PM</p>`
   }
 ];
