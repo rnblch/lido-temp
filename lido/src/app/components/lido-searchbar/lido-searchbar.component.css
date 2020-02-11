@@ -1,5 +1,14 @@
 :host ::ng-deep .mat-form-field {
-  width: 60vw !important;
+  width: 40vw !important;
+}
+
+.no-data {
+  pointer-events: none;
+}
+
+.cta-button {
+  border-radius: 50%;
+  margin: 1rem;
 }
 
 @media (min-width: 48em) {

@@ -1,6 +1,7 @@
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 
+import { Lido } from '../../models/Lido';
 import { TemperatureService } from '../../services/temperature.service';
 import { LidoList } from '../lido-list';
 
@@ -35,19 +36,21 @@ export class TemperatureDisplayComponent implements OnInit {
 
   getLatestTemperature(event: string) {
     this.selectedLido = event;
-    this.temperatureService.getTemperatureByLidoName(event).subscribe(doc => {
-      if (doc[0]) {
-        this.temperatureLabel = true;
-        this.sorryLabel = false;
-        this.latestWaterTemperature = doc[0].waterTemperature;
-        this.latestAreaTemperature = doc[0].areaTemperature;
-        this.lastUpdated = doc[0].date;
-        this.openingHours = this.getOpeningHours(doc[0].lidoName);
-      } else {
-        this.temperatureLabel = false;
-        this.sorryLabel = true;
-      }
-    });
+    this.temperatureService
+      .getTemperatureByLidoName(this.selectedLido)
+      .subscribe(doc => {
+        if (doc[0]) {
+          this.temperatureLabel = true;
+          this.sorryLabel = false;
+          this.latestWaterTemperature = doc[0].waterTemperature;
+          this.latestAreaTemperature = doc[0].areaTemperature;
+          this.lastUpdated = doc[0].date;
+          this.openingHours = this.getOpeningHours(doc[0].lidoName);
+        } else {
+          this.temperatureLabel = false;
+          this.sorryLabel = true;
+        }
+      });
   }
 
   private getOpeningHours(lidoName: string): string {

@@ -4,10 +4,11 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 const nodemailer = require('nodemailer');
-const gmailEmail = encodeURIComponent(functions.config().gmail.email);
+const doNotReplyEmail = encodeURIComponent(functions.config().gmail.email);
 const gmailPassword = encodeURIComponent(functions.config().gmail.password);
+const adminEmail = encodeURIComponent(functions.config().admin.email);
 const mailTransport = nodemailer.createTransport(
-  `smtps://${gmailEmail}:${gmailPassword}@smtp.gmail.com`
+  `smtps://${doNotReplyEmail}:${gmailPassword}@smtp.gmail.com`
 );
 
 exports.sendContactMessage = functions.firestore
@@ -15,8 +16,8 @@ exports.sendContactMessage = functions.firestore
   .onCreate((snap, context) => {
     const snapshot = snap.data();
     const mailOptions = {
-      from: `${gmailEmail}`,
-      to: 'donotreply@lidotemp.com',
+      from: `${doNotReplyEmail}`,
+      to: `${adminEmail}`,
       subject: `You've been contacted by ${snapshot.formData.name} ✨`,
       html: `${snapshot.formData.html}`
     };
@@ -47,7 +48,7 @@ Thank you for your help,
 Your Lidotemp team`;
 
           const mailOptions = {
-            from: `${gmailEmail}`,
+            from: `${doNotReplyEmail}`,
             to: `${doc.data().email}`,
             subject: `Reminder: Submit the temperature of your swimming venue today 🌡️💧`,
             text: message
@@ -62,6 +63,6 @@ Your Lidotemp team`;
         return;
       })
       .catch(err => {
-        return console.log('Error getting documents', err);
+        return console.log('Error getting documents: ', err);
       });
   });

@@ -1,15 +1,17 @@
-<form fxLayout="column" [formGroup]="lidoSearch">
+<form fxLayout="row" [formGroup]="lidoSearch">
   <mat-form-field>
     <input
       class="searchbar"
       formControlName="lidoName"
       type="text"
-      placeholder="Swimming venue name"
-      aria-label="Swimming venue name"
+      placeholder="Search swimming venue"
+      aria-label="Search swimming venue"
       matInput
       [matAutocomplete]="auto"
+      onClick="this.setSelectionRange(0, this.value.length)"
       required
     />
+
     <mat-autocomplete
       #autocomplete
       class="autocomplete"
@@ -20,9 +22,20 @@
         class="space"
         *ngFor="let option of filteredOptions | async"
         [value]="option.name"
+        [ngClass]="_allowSelection(option)"
       >
         {{ option.name }}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
+  <button
+    *ngIf="!router.url.includes('submit')"
+    mat-icon-button
+    mat-raised-button
+    class="cta-button background-glow"
+    (click)="goButton()"
+    aria-label="Search button"
+  >
+    <mat-icon class="icon white">keyboard_arrow_right</mat-icon>
+  </button>
 </form>
