@@ -5,10 +5,11 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 const nodemailer = require('nodemailer');
 const doNotReplyEmail = encodeURIComponent(functions.config().gmail.email);
-const gmailPassword = encodeURIComponent(functions.config().gmail.password);
-const adminEmail = encodeURIComponent(functions.config().admin.email);
+const doNotReplyPassword = encodeURIComponent(
+  functions.config().gmail.password
+);
 const mailTransport = nodemailer.createTransport(
-  `smtps://${doNotReplyEmail}:${gmailPassword}@smtp.gmail.com`
+  `smtps://${doNotReplyEmail}:${doNotReplyPassword}@smtp.gmail.com`
 );
 
 exports.sendContactMessage = functions.firestore
@@ -17,7 +18,7 @@ exports.sendContactMessage = functions.firestore
     const snapshot = snap.data();
     const mailOptions = {
       from: `${doNotReplyEmail}`,
-      to: `${adminEmail}`,
+      to: 'donotreply@lidotemp.com',
       subject: `You've been contacted by ${snapshot.formData.name} ✨`,
       html: `${snapshot.formData.html}`
     };
